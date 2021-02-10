@@ -22,6 +22,7 @@ export default function Home() {
       </head>
     <Header toggleMenu={toggleMenu} menuState={menuActive}/>
     <Story toggleMenu={toggleMenu} menuState={menuActive}/>
+    <p className="p-6 max-w-sm mx-auto bg-black">Welcome to your new Gatsby site.</p>
     <Menu/>
     <FollowUs/>
     <Contact/>

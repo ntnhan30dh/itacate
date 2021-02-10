@@ -1,5 +1,5 @@
 import React from "react"
-import logo from "../images/WingIt_Logo.png"
+import logo from "../images/logo.png"
 import OrderNow from "./ordernow"
 import { Link } from "gatsby"
 
