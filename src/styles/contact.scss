@@ -1,0 +1,136 @@
+.contactContainer {
+  width: 100%;
+  // height: 210px;
+  background-color: #000000;
+  text-align: center;
+  position: relative;
+  padding-bottom: 5%;
+
+  &:before {
+    background: url(../images/wave-black.png);
+    content: "";
+    height: 45px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-repeat: repeat-x;
+    margin-top: -30px;
+    // @media screen and (min-width: 1400px) {
+    //   background-repeat: round;
+    // }
+}
+  // @media screen and (max-width: $break-large) {
+  //   padding-bottom: 30px;
+  // }
+  span {
+    span {
+      position: absolute;
+      bottom: -500px;
+    }
+  }
+
+  .text {
+    padding-top: 2%;
+    padding-bottom: 2%;
+    font-family: Montserrat;
+    // font-size: 28px;
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 2.14;
+    letter-spacing: 0.62px;
+    text-align: center;
+    color: #ffd250;
+    // @media screen and (max-width: $break-large) {
+    //   padding-top: 70px;
+    // }
+    @media screen and (max-width: $phone) {
+      font-size: 20px;
+      padding-top: 5%;;
+    }
+  }
+  .logos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    .logoDiv{
+      margin: 0 2%;
+      width:170px;
+      @media screen and (max-width: $break-large) {
+        width:150px;
+      }
+      @media screen and (max-width: $phone) {
+        width:100px;
+      }
+      img {
+        width: 100%;
+      }
+      // @media screen and (max-width: $phone) {
+      //   width: 50%;
+      //   margin: 0 auto;
+      // }
+    }
+  }
+
+  .blackDiv {
+    background-color: black;
+    ul{
+        padding: 40px 20px 0 20px;
+        li{
+            font-size: 15px;
+            font-weight: bold;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: normal;
+            letter-spacing: 0px;
+            text-align: center;
+            color: #ffffff;
+            text-decoration: underline;
+            list-style-type: none;
+            a{
+              color: #ffffff;
+            }
+        }
+    }
+  }
+  .wave--top::before {
+    background-image: radial-gradient(
+      circle at 10px 15px,
+      transparent 13px,
+      #ffd250 13px
+    );
+  }
+  .wave--top::after {
+    background-image: radial-gradient(
+      circle at 10px 0,
+      #ffd250 12px,
+      transparent 12px
+    );
+  }
+}
+
+// for footer legal pages 
+
+.footer{
+  .blackDiv {
+    background-color: black;
+    ul{
+        padding: 40px 20px 40px 20px;
+        li{
+            font-size: 15px;
+            font-weight: bold;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: normal;
+            letter-spacing: 0px;
+            text-align: center;
+            color: #ffffff;
+            text-decoration: underline;
+            list-style-type: none;
+            a{
+              color: #ffffff;
+            }
+        }
+    }
+  }
+}

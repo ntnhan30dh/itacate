@@ -1,0 +1,104 @@
+$phone: 750px;
+$tablet: 800px;
+$break-large: 1100px;
+
+@import "header";
+@import "story";
+@import "menu";
+@import "followus";
+@import "contact";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+html, body {
+    // overflow-x: hidden;
+    // background-color: aqua;
+    margin: 0;
+    scroll-behavior: smooth;
+  }
+    
+*{
+	box-sizing: border-box;
+	;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+}
+
+
+.pageWrapper {
+  position: relative;
+}
+
+// .wave {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   // background: linear-gradient(to bottom, sandybrown, chocolate);
+//   height: 50px;
+//   position: relative;
+//   margin-bottom: 20px;
+  
+//   &::before,
+//   &::after {
+//   content: "";
+//   position: absolute;
+//   left: 0;
+//   bottom: 0;
+//   right: 0;
+//   background-repeat: repeat-x;
+//   }
+  
+//   &::before {
+//     height: 10px;
+//     background-size: 20px 20px;
+//     background-image: radial-gradient(circle at 10px -5px, transparent 12px, #ffd250 13px);
+//   }
+
+//   &::after {
+//     height: 15px;
+//     background-size: 40px 20px;
+//     background-image: radial-gradient(circle at 10px 15px, #ffd250 12px, transparent 13px);
+//   }
+  
+//   &--top {
+//     // background: linear-gradient(to top, sandybrown, chocolate);
+    
+//     &::before,
+//     &::after {
+//       // to take place in top instead of bottom
+//       bottom: auto;
+//       top: 0;
+//     }
+    
+//     &::before {
+//       background-image: radial-gradient(circle at 10px 15px, transparent 12px, white 13px);
+//     }
+
+//   &::after {
+//     background-image: radial-gradient(circle at 10px 0, white 12px, transparent 12px);
+//     }
+//   }
+// }
+
+// .content {
+//   color: #333;
+//   font-size: 0.8em;
+//   padding: 1em;
+// }
+
+.legalInfo-div{
+  width: 60%;
+  margin: 200px auto;
+  padding-bottom: 5%;
+  min-height: 70vh;
+  @media screen and (max-width: 700px) {
+    width: 80%;
+  }
+  
+    li {
+      // font-family: "Roboto", sans-serif;
+    }
+  
+}
