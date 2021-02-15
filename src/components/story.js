@@ -1,123 +1,82 @@
 import React from "react"
 import Img from "gatsby-image"
 
-// import sticker from "../images/Sticker.png"
-import { graphql, useStaticQuery } from 'gatsby'
-import BackgroundImage from 'gatsby-background-image'
+import { graphql, useStaticQuery } from "gatsby"
+import BackgroundImage from "gatsby-background-image"
 
-// import chikenBox from "../images/chicken_box.png"
-
-import smell from '../images/Wingit_kos_smell.svg'
-import chicken from '../images/Wingit_kos_chicken.svg'
-import box from '../images/Wingit_kos.svg'
-
-
-import Plx from "react-plx"
-
-
-const parallaxData = [
-  {
-    start:'self',
-    duration: 800,
-    properties: [
-      {
-      startValue: 0,
-      endValue: 1,
-      property: "opacity"
-      },
-    ],
-  },
-];
-
-const parallaxMoveUp = [
-  {
-    start:'self',
-    duration: 500,
-    properties: [
-      {
-      startValue: 50,
-      endValue: 0,
-      property: "translateY"
-      },
-      {
-        startValue: 0.5,
-        endValue: 1,
-        property: "scale"
-      },
-      
-      
-    ],
-  },
-];
-
-const Story = (props) => {
-
+const Story = props => {
   const data = useStaticQuery(graphql`
     {
-      bgBig: file(relativePath: { eq: "bgBig-2-1.png" }) {
+      bgBig: file(relativePath: { eq: "bg-big.png" }) {
         childImageSharp {
-          fluid(quality: 90, maxWidth: 1500) {
+          fluid(quality: 90, maxWidth: 2000) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
-      logo: file(relativePath: { eq: "Sticker.png" }) {
+      logo: file(relativePath: { eq: "header-logo.png" }) {
         childImageSharp {
-          fluid(quality: 90, maxWidth: 380) {
+          fluid(quality: 90, maxWidth: 480) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+
+      iconSet: file(relativePath: { eq: "icon-set.png" }) {
+        childImageSharp {
+          fluid(quality: 90, maxWidth: 2000) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+
+      iconSetBottom: file(relativePath: { eq: "story-iconset-bottom.png" }) {
+        childImageSharp {
+          fluid(quality: 90, maxWidth: 2000) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
     }
   `)
-  let nudge = props.menuState ? 'nudge' : '';
+  let nudge = props.menuState ? "nudge" : ""
   const imageData = data.bgBig.childImageSharp.fluid
   return (
     <section className={`storyContainer ${nudge}`}>
-      <BackgroundImage  Tag="section"
-          fluid={imageData}
-          backgroundColor={`#040e18`}
-          className="bgContainer">
+      <BackgroundImage
+        Tag="section"
+        fluid={imageData}
+        background-size="cover"
+        opacity={0.5}
+        className="bgContainer"
+      >
         <span className="before"></span>
         <span className="after"></span>
-        {/* <div className="stickerDiv">
-          <img src={sticker} alt="sticker" />
-        </div> */}
-        <Img
-              className={"stickerDiv"}
-              fluid={data.logo.childImageSharp.fluid}
-            />
+        <Img className={"stickerDiv"} fluid={data.logo.childImageSharp.fluid} />
       </BackgroundImage>
-      {/* <div className="storyDiv wave"> */}
       <div className="storyDiv ">
-      <Img
-              fluid={data.logo.childImageSharp.fluid}
-            />
         <span id="story" name="story"></span>
-        <div className="textDiv">
-          <p className="text1">
-          Nothing fits a night in tuning into Netflix or hanging out with friends better than succulent fried chicken - and no one makes it better than Wing it!
-
-          </p>
-          <p className="text2">
-          We're experts at crispy chicken wings & juicy strips, paired with delicious dips and original sides like criss cut fries. The perfect comfort food, delivered right to your movie night.
-          </p>
+        <Img
+          className={"w-1/3 mx-auto"}
+          fluid={data.iconSet.childImageSharp.fluid}
+        />
+        <div className="text-container container w-1/2 mx-auto text-center py-14 px-6">
+        <h1 className="text-green text-4xl font-semibold">
+          Get your tastebuds ready, because Itacate is here to deliver fresh,
+          fiery food.
+        </h1>
+        <p className="text-black font-light text-2xl mt-14" >
+          Whatever spice level you can handle (hey, don’t judge!), we’ve got
+          something for everyone and every occasion. Our favourites include
+          tongue-tingling burritos and quesadillas with a choice of fillings and
+          traditional salads, all carefully prepared for you to simply unwrap
+          and enjoy.
+        </p>
         </div>
-        {/* <Plx parallaxData={parallaxMoveUp} className="chickenBoxDiv">
-          <img src={chikenBox} alt="" />
-        </Plx> */}
-          
-        <div  className="chickenBox">
-        <Plx parallaxData={parallaxData}>
-          <img src={smell} alt="" />
-          </Plx>
-          <Plx parallaxData={parallaxMoveUp}>
-          <img src={chicken} alt="" />
-          </Plx>
-          <div>
-          <img src={box} alt="" />
-          </div>
-        </div>
+        <Img
+          className={"w-full"}
+          fluid={data.iconSetBottom.childImageSharp.fluid}
+        />
       </div>
     </section>
   )

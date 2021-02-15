@@ -1,7 +1,5 @@
 .storyContainer {
-  margin-top: 160px;
   width: 100%;
-  background-color: #ffd250;
   position: relative;
   transition: 1s;
   &:after {
@@ -19,28 +17,14 @@
       background-repeat: round;
     }
   }
-  @media screen and (max-width: $break-large) {
-    margin-top: 135px;
-  }
-  // @media screen and (max-width: $phone) {
-  //   margin-top: 50px;
-  // }
-  // @media screen and (max-width: 750px) {
-  //   margin-top: 80px;
-  // }
-  // @media screen and (max-width: 500px) {
-  //   margin-top: 50px;
-  // }
+
 
   .waveDiv {
     width: 100%;
   }
   .bgContainer {
-    // height: 815px;
     height: 715px;
     width: 100%;
-    // background-image: url(../images/bgBig.png);
-    background-image: url(../images/bgBig-2-1.png);
     background-size: cover;
     background-position: center;
     display: flex;
@@ -58,28 +42,30 @@
       top: 0;
       left: 0;
       width: 100%;
-      background-repeat: repeat-x;
-      margin-top: -30px;
+     // background-repeat: repeat-x;
+    //  margin-top: -20px;
       background-repeat: no-repeat;
   background-size:cover;
   background-position:bottom;
       @media screen and (min-width: 1400px) {
-        background-repeat: round;
+      //  background-repeat: round;
       }
     }
 
     // &:after {
       .after{
       width: 100%;
-      background: url(../images/wave-yellow.png);
+      background: url(../images/wave-white.png);
       content: "";
       height: 44px;
       position: absolute;
       bottom: 0;
       left: 0;
-      background-repeat: repeat-x;
+      background-repeat: no-repeat;
+      background-size:cover;
+      background-position:top;
       @media screen and (min-width: 1400px) {
-        background-repeat: round;
+        // background-repeat: round;
       }
     }
     @media screen and (max-width: $break-large) {
@@ -97,7 +83,7 @@
     .stickerDiv {
       // width: 406px;
       // height: 406px;
-      width: 380px;
+      width: 480px;
       height: 380px;
       @media screen and (max-width: $break-large) {
         width: 350px;
@@ -116,161 +102,11 @@
         width: 100%;
       }
     }
-    // .before {
-    //   height: 10px;
-    //   background-size: 20px 20px;
-    //   background-image: radial-gradient(circle at 10px -5px, transparent 12px, #ffd250 13px);
-    //   }
-
-    // .after {
-    //   height: 15px;
-    //   background-size: 40px 20px;
-    //   background-image: radial-gradient(circle at 10px 15px, #ffd250 12px, transparent 12px);
-    //   }
+ 
   }
-  //   .before,
-  //  .after {
-  //   content: "";
-  //   position: absolute;
-  //   left: 0;
-  //   bottom: 0;
-  //   right: 0;
-  //   background-repeat: repeat-x;
-  //   }
+  
   .storyDiv {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    //height: 528px;
-    height: 428px;
-    background-color: #ffd250;
-    padding: 5% 10% 0 10%;
-    // border: 1px solid pink;
-    @media mscreen and (max-width: 1250px) {
-      // padding-left: 5%;
-      // padding-right: 5%;
-    }
-    @media screen and (max-width: $break-large) {
-      flex-direction: column;
-      padding-top: 10%;
-      align-items: center;
-      height: 490px;
-    }
-    @media screen and (max-width: $phone) {
-      height: 380px;
-    }
-
-    // &::before {
-    //   background-image: radial-gradient(circle at 10px -5px, transparent 13px, white 13px);
-    // }
-
-    // &::after {
-    //   background-image: radial-gradient(circle at 10px 15px, white 12px, transparent 12px);
-    // }
-    span {
-      position: absolute;
-      top: -180px;
-    }
-    .textDiv {
-      width: 659px;
-      height: 428px;
-      font-family: Montserrat;
-      // font-size: 24px;
-      font-size: 20px;
-      line-height: 1.42;
-      letter-spacing: 0.53px;
-      color: #000000;
-      // border: blue 1px solid;
-      // padding: 0 5%;
-
-      @media screen and (max-width: $break-large) {
-        text-align: center;
-        width: 607px;
-        height: 522px;
-        font-size: 16.8px;
-        letter-spacing: 0.37px;
-        padding-bottom: 5%;
-      }
-      @media screen and (max-width: $phone) {
-        width: 100%;
-        font-size: 14px;
-        padding: 0 5%;
-      }
-      .text1 {
-        // font-size: 34px;
-        font-size: 30px;
-        font-weight: 800;
-        letter-spacing: 0.75px;
-        @media screen and (max-width: $break-large) {
-          font-size: 23.8px;
-          letter-spacing: 0.52px;
-        }
-        @media screen and (max-width: $phone) {
-          font-size: 20px;
-        }
-      }
-    }
-    // .chickenBoxDiv {
-    //   img {
-    //     width: 100%;
-    //   }
-    //   @media screen and (max-width: $break-large) {
-    //     width: 350px;
-    //     z-index: 9;
-    //   }
-
-    //   @media screen and (max-width: $phone) {
-    //     // width: 250px;
-    //     width: 40%;
-    //   }
-    // }
-    .chickenBox {
-      width: 30%;
-      // max-width: 100%;
-      // margin-bottom: -250px;
-      z-index: 2;
-      // margin-left: auto;
-      // margin-right: 0;
-      // padding-top: 400px;
-      position: relative;
-      // border: blue 1px solid;
-     
-      height: 100%;
-      // padding: auto 0;
-      @media screen and (max-width: $break-large) {
-        min-width: 400px;
-      }
-
-      @media screen and (max-width: $phone) {
-        min-width: 50%;
-      }
-
-      div {
-        position: absolute !important;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        // border: black 1px solid;
-        margin-top: -25%;
-        @media screen and (max-width: 1350px) {
-          margin-top: -5%;
-        }
-        @media screen and (max-width: $break-large) {
-          margin-top: -20%;
-        }
-
-        @media screen and (max-width: $phone) {
-          margin-top: -5%;
-        }
-
-        img {
-          width: 100%;
-        }
-      }
-    }
+   
   }
 }
 .nudge {

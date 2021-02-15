@@ -2,6 +2,7 @@ import React from "react"
 import logo from "../images/logo.png"
 // import OrderNow from "./ordernow"
 import { Link } from "gatsby"
+import Sticky from "react-sticky-el"
 
 const Header = props => {
   let menuActive = props.menuState ? "is-inactive" : ""
@@ -9,6 +10,7 @@ const Header = props => {
   let hidden = props.menuState ? "hidden" : ""
   // let wFull = !props.menuState ? "w-full" : ""
   return (
+        <Sticky  className="sticky">
     <nav className="nav">
       <div className={`leftDiv `}>
         <Link to="/">
@@ -45,6 +47,7 @@ const Header = props => {
         {/* <OrderNow /> */}
       </div>
     </nav>
+    </Sticky>
   )
 }
 

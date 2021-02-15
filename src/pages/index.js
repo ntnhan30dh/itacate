@@ -18,7 +18,7 @@ export default function Home() {
   return (
     <div className="pageWrapper">
       <head>
-      <title>Wing it!</title>
+      <title>Itacate</title>
       </head>
     <Header toggleMenu={toggleMenu} menuState={menuActive}/>
     <Story toggleMenu={toggleMenu} menuState={menuActive}/>
