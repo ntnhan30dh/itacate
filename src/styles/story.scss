@@ -2,22 +2,21 @@
   width: 100%;
   position: relative;
   transition: 1s;
-  &:after {
-    width: 100%;
-    // background: url(../images/wave-yellow.png);
-    background: url(../images/wave-yellow-new.png);
-    content: "";
-    height: 44px;
-    position: absolute;
-    bottom: -44px;
-    left: 0;
-    background-repeat: repeat-x;
-    // background-color: blue;
-    @media screen and (min-width: 1400px) {
-      background-repeat: round;
-    }
-  }
-
+  // &:after {
+  //   width: 100%;
+  //   // background: url(../images/wave-yellow.png);
+  //   background: url(../images/wave-yellow-new.png);
+  //   content: "";
+  //   height: 44px;
+  //   position: absolute;
+  //   bottom: -44px;
+  //   left: 0;
+  //   background-repeat: repeat-x;
+  //   // background-color: blue;
+  //   @media screen and (min-width: 1400px) {
+  //     background-repeat: round;
+  //   }
+  // }
 
   .waveDiv {
     width: 100%;
@@ -34,7 +33,7 @@
     position: relative;
 
     // &:after {
-      .before{
+    .before {
       background: url(../images/wave-green.png);
       content: "";
       height: 45px;
@@ -42,18 +41,13 @@
       top: 0;
       left: 0;
       width: 100%;
-     // background-repeat: repeat-x;
-    //  margin-top: -20px;
       background-repeat: no-repeat;
-  background-size:cover;
-  background-position:bottom;
-      @media screen and (min-width: 1400px) {
-      //  background-repeat: round;
-      }
+      background-size: cover;
+      background-position: bottom;
     }
 
     // &:after {
-      .after{
+    .after {
       width: 100%;
       background: url(../images/wave-white.png);
       content: "";
@@ -62,8 +56,8 @@
       bottom: 0;
       left: 0;
       background-repeat: no-repeat;
-      background-size:cover;
-      background-position:top;
+      background-size: cover;
+      background-position: top;
       @media screen and (min-width: 1400px) {
         // background-repeat: round;
       }
@@ -102,12 +96,8 @@
         width: 100%;
       }
     }
- 
   }
-  
-  .storyDiv {
-   
-  }
+
 }
 .nudge {
   transform: translateY(40px);
