@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import Header from "../components/header"
 import Story from "../components/story"
 import Menu from "../components/menu"
-import FollowUs from "../components/followus"
+import Video from "../components/video"
 import Contact from "../components/contact"
 import 'semantic-ui-css/semantic.min.css'
 
@@ -23,8 +23,8 @@ export default function Home() {
     <Header toggleMenu={toggleMenu} menuState={menuActive}/>
     <Story toggleMenu={toggleMenu} menuState={menuActive}/>
     <Menu/>
-    <FollowUs/>
-    <Contact/>
+    <Video/>
+    {/* <Contact/> */}
     </div>
   )
 }

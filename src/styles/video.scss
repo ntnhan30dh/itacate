@@ -1,0 +1,15 @@
+.videoContainer {
+  .wave-white-top {
+    background: url(../images/wave-white.png);
+    content: "";
+    height: 45px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    z-index: 10;
+  }
+}
