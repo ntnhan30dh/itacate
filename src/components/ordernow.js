@@ -18,7 +18,6 @@ function OrderNow() {
         <Modal.Description>
         </Modal.Description>
         <CountryList/>
-
       </Modal.Content>
     </Modal>
   )

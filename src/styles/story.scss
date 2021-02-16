@@ -74,28 +74,7 @@
       height: 372px;
     }
 
-    .stickerDiv {
-      // width: 406px;
-      // height: 406px;
-      width: 480px;
-      height: 380px;
-      @media screen and (max-width: $break-large) {
-        width: 350px;
-        height: 350px;
-      }
-
-      @media screen and (max-width: $phone) {
-        width: 200px;
-        height: 200px;
-      }
-      @media screen and (max-width: 500px) {
-        width: 150px;
-        height: 150px;
-      }
-      img {
-        width: 100%;
-      }
-    }
+   
   }
 
 }
