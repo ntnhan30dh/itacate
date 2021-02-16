@@ -24,7 +24,7 @@ export default function Home() {
     <Story toggleMenu={toggleMenu} menuState={menuActive}/>
     <Menu/>
     <Video/>
-    {/* <Contact/> */}
+    <Contact/>
     </div>
   )
 }

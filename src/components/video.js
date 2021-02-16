@@ -48,9 +48,11 @@ const Video = () => {
           fluid={data.video.childImageSharp.fluid}
         />
         <Img
-          className={" iconSet w-full mx-auto my-20"}
+          className={" iconSet w-full my-24"}
           fluid={data.iconBottom.childImageSharp.fluid}
         />
+        <div>hi</div>
+        <span className="wave-green-bottom"></span>
     </section>
   )
 }
