@@ -2,6 +2,7 @@ import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
 import Img from "gatsby-image"
+import MenuItem from "./menu-item"
 
 const Menu = () => {
   const data = useStaticQuery(graphql`
@@ -70,34 +71,48 @@ const Menu = () => {
           EXPLORE OUR MENU TODAY!
         </h1>
       </div>
-      <div className="menu-item-container flex border-15 border-green w-1/2 mx-auto">
-        <div className="relative w-2/3">
-      <div className="relative">
-        <div className="absolute w-8 z-10 top-1">
-      <Img
-          className={"badget w-full"}
-          fluid={data.brBeefBadget.childImageSharp.fluid}
-        />
-        </div>
-        
-        <Img
-          className={" menu-pic w-full"}
-          fluid={data.burritoVeggie.childImageSharp.fluid}
-        />
-      </div>
-        </div>
-        <div className="menu-list flex flex-col w-1/3">
-          <div className="m-auto w-3/4">
-          <h1 className="text-4xl text-red text-center">BURRITOS</h1>
-          <ul className="text-2xl text-green  text-center">
-            <li>Beef Burrito</li>
-            <li>Chicken Burrito</li>
-            <li>Pork Burrito</li>
-            <li>Veggi Buritto</li>
-          </ul>
-          </div>
-        </div>
-      </div>
+      <MenuItem
+        setting={{
+          border: "green",
+          name: "BURRITOS",
+          itemList: [
+            "Beef Burrito",
+            "Chicken Burrito",
+            "Pork Burrito",
+            "Veggi Buritto",
+          ],
+        }}
+      />
+      {/* <MenuItem
+        setting={{
+          border: "yellow",
+          name: "QUESADILLAS",
+          itemList: [
+            "Beef Quesadilla ",
+            "Chicken Quesadilla ",
+            "Veggi Quesadilla ",
+          ],
+        }}
+      />
+      <MenuItem
+        setting={{
+          border: "green",
+          name: "BURRITO BOWLS",
+          itemList: ["Beef bowl", "Chicken bowl", "Veggie bowl"],
+        }}
+      />
+      <MenuItem
+        setting={{
+          border: "red",
+          name: "SALSAS",
+          itemList: [
+            "Guacamole ",
+            "Salsa roja",
+            "Salsa verde",
+            "Salsa picante",
+          ],
+        }}
+      /> */}
     </section>
   )
 }

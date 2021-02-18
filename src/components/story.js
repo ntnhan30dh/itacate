@@ -52,7 +52,7 @@ const Story = props => {
       >
         <span className="before"></span>
         <span className="after"></span>
-        <Img className={"stickerDiv"} fluid={data.logo.childImageSharp.fluid} />
+        <Img className={"stickerDiv w-1/3"} fluid={data.logo.childImageSharp.fluid} />
       </BackgroundImage>
       <div className="storyDiv ">
         <span id="story" name="story"></span>
