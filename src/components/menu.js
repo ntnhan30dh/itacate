@@ -21,13 +21,7 @@ const Menu = () => {
           }
         }
       }
-      burritoVeggie: file(relativePath: { eq: "burrito-veggie.png" }) {
-        childImageSharp {
-          fluid(quality: 90, maxWidth: 700) {
-            ...GatsbyImageSharpFluid_withWebp
-          }
-        }
-      }
+
       brBeefBadget: file(relativePath: { eq: "br-beef-badget.png" }) {
         childImageSharp {
           fluid(quality: 90, maxWidth: 200) {
@@ -51,12 +45,12 @@ const Menu = () => {
           className="pic-container w-1/2"
         ></BackgroundImage>
 
-        <div className="red-container container w-1/2 bg-red p-20 ">
+        <div className="red-container container w-1/2 bg-red p-20 py-40">
           <Img
-            className={"w-1/2 mx-auto my-10"}
+            className={"w-2/3 mx-auto my-10"}
             fluid={data.iconSet.childImageSharp.fluid}
           />
-          <p className="text-2xl text-yellow font-semibold w-1/2 mx-auto">
+          <p className="text-4xl text-yellow font-semibold w-2/3 mx-auto">
             Order for your movie night in or an exciting lunch time treat -
             because, let’s face it, life is always better with burritos.
           </p>
@@ -74,7 +68,7 @@ const Menu = () => {
       <MenuItem
         setting={{
           border: "green",
-          name: "BURRITOS",
+          name: "burritos",
           itemList: [
             "Beef Burrito",
             "Chicken Burrito",
@@ -83,10 +77,10 @@ const Menu = () => {
           ],
         }}
       />
-      {/* <MenuItem
+      <MenuItem
         setting={{
           border: "yellow",
-          name: "QUESADILLAS",
+          name: "quesadillas",
           itemList: [
             "Beef Quesadilla ",
             "Chicken Quesadilla ",
@@ -97,14 +91,14 @@ const Menu = () => {
       <MenuItem
         setting={{
           border: "green",
-          name: "BURRITO BOWLS",
+          name: "burrito bowls",
           itemList: ["Beef bowl", "Chicken bowl", "Veggie bowl"],
         }}
       />
       <MenuItem
         setting={{
           border: "red",
-          name: "SALSAS",
+          name: "salsas",
           itemList: [
             "Guacamole ",
             "Salsa roja",
@@ -112,7 +106,7 @@ const Menu = () => {
             "Salsa picante",
           ],
         }}
-      /> */}
+      />
     </section>
   )
 }
