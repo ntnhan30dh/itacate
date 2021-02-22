@@ -1,9 +1,10 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
 
 const MenuItem = props => {
   const [pic, setPic] = useState(0)
+
   const data = useStaticQuery(graphql`
     {
       burritoBeef: file(relativePath: { eq: "burrito_beef.jpg" }) {
@@ -112,7 +113,7 @@ const MenuItem = props => {
         }
       }
 
-      dipPicante: file(relativePath: { eq: "dip_salsa_verde.png" }) {
+      dipPicante: file(relativePath: { eq: "dip_salsa_picante.png" }) {
         childImageSharp {
           fluid(quality: 90, maxWidth: 700) {
             ...GatsbyImageSharpFluid_withWebp
@@ -120,7 +121,30 @@ const MenuItem = props => {
         }
       }
 
-      brBeefBadget: file(relativePath: { eq: "br-beef-badget.png" }) {
+      brBeefBadge: file(relativePath: { eq: "br-beef-badge.png" }) {
+        childImageSharp {
+          fluid(quality: 90, maxWidth: 200) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+      queVeggieBadge: file(relativePath: { eq: "que-veggie-badge.png" }) {
+        childImageSharp {
+          fluid(quality: 90, maxWidth: 200) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+
+      bowlChickenBadge: file(relativePath: { eq: "bowl-chicken-badge.png" }) {
+        childImageSharp {
+          fluid(quality: 90, maxWidth: 200) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+
+      salVerdeBadge: file(relativePath: { eq: "sal-verde-badge.png" }) {
         childImageSharp {
           fluid(quality: 90, maxWidth: 200) {
             ...GatsbyImageSharpFluid_withWebp
@@ -131,31 +155,81 @@ const MenuItem = props => {
   `)
 
   const picsSrc = {
-    burritos: [
-      data.burritoBeef.childImageSharp.fluid,
-      data.burritoChicken.childImageSharp.fluid,
-      data.burritoPork.childImageSharp.fluid,
-      data.burritoChicken.childImageSharp.fluid,
-    ],
-    quesadillas: [
-      data.quesadillaBeef.childImageSharp.fluid,
-      data.quesadillaChicken.childImageSharp.fluid,
-      data.quesadillaVeggie.childImageSharp.fluid,
-    ],
-    "burrito bowls": [
-      data.burritoBowlBeef.childImageSharp.fluid,
-      data.burritoBowlChicken.childImageSharp.fluid,
-      data.burritoBowlVeggie.childImageSharp.fluid,
-    ],
-    salsas: [
-      data.dipQuacamole.childImageSharp.fluid,
-      data.dipRoja.childImageSharp.fluid,
-      data.dipVerde.childImageSharp.fluid,
-      data.dipPicante.childImageSharp.fluid,
-    ],
+    burritos: {
+      pics: [
+        data.burritoBeef.childImageSharp.fluid,
+        data.burritoChicken.childImageSharp.fluid,
+        data.burritoPork.childImageSharp.fluid,
+        data.burritoVeggie.childImageSharp.fluid,
+      ],
+      badges: [
+        data.brBeefBadge.childImageSharp.fluid,
+        data.queVeggieBadge.childImageSharp.fluid,
+        data.bowlChickenBadge.childImageSharp.fluid,
+        data.salVerdeBadge.childImageSharp.fluid,
+      ],
+    },
+    quesadillas: {
+      pics: [
+        data.quesadillaBeef.childImageSharp.fluid,
+        data.quesadillaChicken.childImageSharp.fluid,
+        data.quesadillaVeggie.childImageSharp.fluid,
+      ],
+      badges: [
+        data.brBeefBadge.childImageSharp.fluid,
+        data.queVeggieBadge.childImageSharp.fluid,
+        data.bowlChickenBadge.childImageSharp.fluid,
+        data.salVerdeBadge.childImageSharp.fluid,
+      ],
+    },
+
+    "burrito bowls": {
+      pics: [
+        data.burritoBowlBeef.childImageSharp.fluid,
+        data.burritoBowlChicken.childImageSharp.fluid,
+        data.burritoBowlVeggie.childImageSharp.fluid,
+      ],
+
+      badges: [
+        data.brBeefBadge.childImageSharp.fluid,
+        data.queVeggieBadge.childImageSharp.fluid,
+        data.bowlChickenBadge.childImageSharp.fluid,
+        data.salVerdeBadge.childImageSharp.fluid,
+      ],
+    },
+    salsas: {
+      pics: [
+        data.dipQuacamole.childImageSharp.fluid,
+        data.dipRoja.childImageSharp.fluid,
+        data.dipVerde.childImageSharp.fluid,
+        data.dipPicante.childImageSharp.fluid,
+      ],
+      badges: [
+        data.brBeefBadge.childImageSharp.fluid,
+        data.queVeggieBadge.childImageSharp.fluid,
+        data.bowlChickenBadge.childImageSharp.fluid,
+        data.salVerdeBadge.childImageSharp.fluid,
+      ],
+    },
   }
 
-  const picArr = picsSrc[`${props.setting.name}`]
+  const picArr = picsSrc[`${props.setting.name}`]["pics"]
+  const badgeArr = picsSrc[`${props.setting.name}`]["badges"]
+
+  useEffect(() => {
+    if(pic>= picArr.length){
+      setPic(0)
+    }
+    const interval = setInterval(() => {
+      if (pic<=picArr.length) {
+        setPic(pic => pic + 1)
+      }
+    }, 5000)
+
+    return () => {
+      clearInterval(interval)
+    }
+  }, [pic])
 
   return (
     <div
@@ -163,10 +237,7 @@ const MenuItem = props => {
     >
       <div className="relative w-2/3 overflow-hidden">
         <div className="absolute w-1/5 z-50 top-1">
-          <Img
-            className={"badget w-full"}
-            fluid={data.brBeefBadget.childImageSharp.fluid}
-          />
+          <Img className={"badget w-full"} fluid={badgeArr[pic]} />
         </div>
         <div className="absolute w-full bottom-0 top-0">
           <Img
