@@ -33,8 +33,8 @@ const Menu = () => {
   `)
   const imageData = data.bg.childImageSharp.fluid
   return (
-    <section className="menuContainer">
-      <span id="menu" name="menu"></span>
+    <section className="menuContainer " id="menu">
+      {/* <span id="menu" name="menu"></span> */}
       <span className="before"></span>
       <div className="pic-red-container  w-full flex relative	">
         <span className="after"></span>

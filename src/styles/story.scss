@@ -73,22 +73,23 @@
     @media screen and (max-width: 500px) {
       height: 372px;
     }
-
-   
   }
-  .imageMarquee
-  {
-     // padding: 10% 0;
-      height: 186px; /* Any size you want */ 
-      background:url(../images/story-iconset-bottom.png) repeat-x 0 / 100% auto;
-      height:200px; /* this value is not important, just not zero */
-      animation: ani 10s linear infinite ;
+  .imageMarquee {
+    height: 186px; /* Any size you want */
+    background: url(../images/story-iconset-bottom.png) repeat-x 0 / 100% auto;
+    height: 200px; /* this value is not important, just not zero */
+    animation: ani 10s linear infinite;
   }
-  
+  .orderNow{
+     z-index: 1000000;
+  }
   @keyframes ani {
-   
-    0%{background-position: 0 0;}
-    100%{background-position: 100vw 0;}        
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 100vw 0;
+    }
   }
 }
 .nudge {

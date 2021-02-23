@@ -5,7 +5,7 @@ import ig from "../images/ig.png"
 
 const Contact = () => {
   return (
-    <section className="contactContainer bg-green">
+    <section className="contactContainer bg-green" id="follow">
       <div className="center-div w-1/3 mx-auto flex justify-center py-14">
         <div className="followUs-div mr-10">
           <h1 className="text-yellow text-2xl uppercase">follow us</h1>

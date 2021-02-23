@@ -1,6 +1,5 @@
 import React from "react"
 import Img from "gatsby-image"
-
 import { graphql, useStaticQuery } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
 
@@ -15,6 +14,14 @@ const Story = props => {
         }
       }
       logo: file(relativePath: { eq: "header-logo.png" }) {
+        childImageSharp {
+          fluid(quality: 90, maxWidth: 480) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+
+      orderNow: file(relativePath: { eq: "order-now.png" }) {
         childImageSharp {
           fluid(quality: 90, maxWidth: 480) {
             ...GatsbyImageSharpFluid_withWebp
@@ -54,8 +61,8 @@ const Story = props => {
         <span className="after"></span>
         <Img className={"stickerDiv w-1/3"} fluid={data.logo.childImageSharp.fluid} />
       </BackgroundImage>
-      <div className="storyDiv ">
-        <span id="story" name="story"></span>
+      <div className="storyDiv" id="story">
+        {/* <span  name="story"></span> */}
         <Img
           className={"w-1/3 mx-auto"}
           fluid={data.iconSet.childImageSharp.fluid}
@@ -77,7 +84,7 @@ const Story = props => {
           className={"w-full"}
           fluid={data.iconSetBottom.childImageSharp.fluid}
         /> */}
-        <div class="imageMarquee"></div>
+        <div class="imageMarquee my-20"></div>
       </div>
     </section>
   )

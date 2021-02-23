@@ -136,26 +136,26 @@
       }
     }
     button {
-      width: 162px;
-      height: 49px;
-      background-color: #000000;
-      font-family: Montserrat;
-      font-size: 17.6px;
-      font-weight: 800;
-      line-height: 1.55;
-      letter-spacing: 0.93px;
-      text-align: center;
-      color: #ffd250;
-      border: none;
-      padding: 0;
-      border-radius: 0;
-      &:hover {
-        background-color: transparent;
-        background-image: none;
-        box-shadow: 0 0 0 1px transparent inset,
-          0 0 0 0 rgba(34, 36, 38, 0.15) inset;
-        color: #000000;
-      }
+      // width: 162px;
+      // height: 49px;
+      // background-color: #000000;
+      // font-family: Montserrat;
+      // font-size: 17.6px;
+      // font-weight: 800;
+      // line-height: 1.55;
+      // letter-spacing: 0.93px;
+      // text-align: center;
+      // color: #ffd250;
+      // border: none;
+      // padding: 0;
+      // border-radius: 0;
+      // &:hover {
+      //   background-color: transparent;
+      //   background-image: none;
+      //   box-shadow: 0 0 0 1px transparent inset,
+      //     0 0 0 0 rgba(34, 36, 38, 0.15) inset;
+      //   color: #000000;
+      // }
 
       @media screen and (max-width: $break-large) {
         width: 138px;

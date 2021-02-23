@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button, Modal } from 'semantic-ui-react'
+import {  Modal } from 'semantic-ui-react'
 import CountryList from './countrylist'
 
 
@@ -11,7 +11,7 @@ function OrderNow() {
       onClose={() => setOpen(false)}
       onOpen={() => setOpen(true)}
       open={open}
-      trigger={<Button>Order Now</Button>}
+      trigger={<button>ORDER NOW</button>}
     >
       <Modal.Header>Please select the country</Modal.Header>
       <Modal.Content >

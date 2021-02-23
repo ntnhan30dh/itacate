@@ -45,6 +45,12 @@
     border-color: rgba(215, 29, 36, var(--tw-border-opacity));
   }
 
+  button:focus {
+    outline: 1px dotted;
+    outline: 5px auto rgba(11, 148, 70,1);
+    padding: 5px;
+}
+
   .menu-pic {
     animation: 1s ease-out 0s 1 slideInFromLeft;
   }
