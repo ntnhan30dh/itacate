@@ -7,7 +7,7 @@ import BackgroundImage from "gatsby-background-image"
 const Story = props => {
   const data = useStaticQuery(graphql`
     {
-      bgBig: file(relativePath: { eq: "bg-big.png" }) {
+      bgBig: file(relativePath: { eq: "bg-big_fill.png" }) {
         childImageSharp {
           fluid(quality: 90, maxWidth: 2000) {
             ...GatsbyImageSharpFluid_withWebp
@@ -73,10 +73,11 @@ const Story = props => {
           and enjoy.
         </p>
         </div>
-        <Img
+        {/* <Img
           className={"w-full"}
           fluid={data.iconSetBottom.childImageSharp.fluid}
-        />
+        /> */}
+        <div class="imageMarquee"></div>
       </div>
     </section>
   )
