@@ -31,21 +31,30 @@
     background-position: top;
     z-index: 10;
   }
- 
-  
-.menu-pic{
-  animation: 1s ease-out 0s 1 slideInFromLeft;
-}
-.menu-pic2{
-  animation: 1s ease-out 0s 1 slideInFromRight;
 
-}
+  .border-green {
+    --tw-border-opacity: 1;
+    border-color: rgba(11, 148, 70, var(--tw-border-opacity));
+  }
+  .border-yellow {
+    --tw-border-opacity: 1;
+    border-color: rgba(255, 210, 80, var(--tw-border-opacity));
+  }
+  .border-red {
+    --tw-border-opacity: 1;
+    border-color: rgba(215, 29, 36, var(--tw-border-opacity));
+  }
 
-.badget{
-  animation:  rotate 1s linear;
+  .menu-pic {
+    animation: 1s ease-out 0s 1 slideInFromLeft;
+  }
+  .menu-pic2 {
+    animation: 1s ease-out 0s 1 slideInFromRight;
+  }
 
-}
-
+  .badget {
+    animation: rotate 1s linear;
+  }
 }
 
 @keyframes slideInFromLeft {

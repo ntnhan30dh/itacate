@@ -75,6 +75,8 @@ const Menu = () => {
             "Pork Burrito",
             "Veggi Buritto",
           ],
+          reverse: "translate-x-12",
+          badge: "top-8 -left-20"
         }}
       />
       <MenuItem
@@ -86,6 +88,8 @@ const Menu = () => {
             "Chicken Quesadilla ",
             "Veggi Quesadilla ",
           ],
+          reverse: "flex-row-reverse -translate-x-12",
+          badge: "top-8 -right-20"
         }}
       />
       <MenuItem
@@ -93,6 +97,8 @@ const Menu = () => {
           border: "green",
           name: "burrito bowls",
           itemList: ["Beef bowl", "Chicken bowl", "Veggie bowl"],
+          reverse: "translate-x-12",
+          badge: "top-8 -left-20",
         }}
       />
       <MenuItem
@@ -105,6 +111,8 @@ const Menu = () => {
             "Salsa verde",
             "Salsa picante",
           ],
+          reverse: "flex-row-reverse -translate-x-12",
+          badge: "top-8 -right-20",
         }}
       />
     </section>

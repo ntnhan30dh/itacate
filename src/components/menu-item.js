@@ -217,11 +217,11 @@ const MenuItem = props => {
   const badgeArr = picsSrc[`${props.setting.name}`]["badges"]
 
   useEffect(() => {
-    if(pic>= picArr.length){
+    if (pic >= picArr.length) {
       setPic(0)
     }
     const interval = setInterval(() => {
-      if (pic<=picArr.length) {
+      if (pic <= picArr.length) {
         setPic(pic => pic + 1)
       }
     }, 5000)
@@ -229,16 +229,16 @@ const MenuItem = props => {
     return () => {
       clearInterval(interval)
     }
-  }, [pic])
+  }, [pic, picArr.length])
 
   return (
     <div
-      className={`menu-item-container flex border-15 border-${props.setting.border} w-1/2 mx-auto 	`}
+      className={`menu-item-container flex border-15 border-${props.setting.border} w-1/2 mx-auto my-12  transform  ${props.setting.reverse}`}
     >
-      <div className="relative w-2/3 overflow-hidden">
-        <div className="absolute w-1/5 z-50 top-1">
+        <div className={`absolute w-1/6 z-50 ${props.setting.badge}`}>
           <Img className={"badget w-full"} fluid={badgeArr[pic]} />
         </div>
+      <div className="relative w-2/3 overflow-hidden">
         <div className="absolute w-full bottom-0 top-0">
           <Img
             className={" menu-pic2 w-full"}
@@ -256,6 +256,7 @@ const MenuItem = props => {
             {props.setting.itemList.map(i => (
               <li>
                 <button
+                  className="text-2xl text-green"
                   onClick={() => setPic(props.setting.itemList.indexOf(i))}
                 >
                   {i}
