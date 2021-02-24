@@ -233,12 +233,12 @@ const MenuItem = props => {
 
   return (
     <div
-      className={`menu-item-container flex border-15 border-${props.setting.border} w-1/2 mx-auto my-12  transform  ${props.setting.reverse}`}
+      className={`menu-item-container flex flex-col md:flex-row border-15 border-${props.setting.border} w-3/4 lg:w-2/3 xl:w-1/2 mx-auto my-12  transform  ${props.setting.reverse}`}
     >
-        <div className={`absolute w-1/6 z-50 ${props.setting.badge}`}>
+        <div className={`absolute w-32 md:w-1/6 z-50 ${props.setting.badge}`}>
           <Img className={"badget w-full"} fluid={badgeArr[pic]} />
         </div>
-      <div className="relative w-2/3 overflow-hidden">
+      <div className="relative w-full md:w-2/3 overflow-hidden">
         <div className="absolute w-full bottom-0 top-0">
           <Img
             className={" menu-pic2 w-full"}
@@ -247,12 +247,12 @@ const MenuItem = props => {
         </div>
         <Img className={" menu-pic w-full "} fluid={picArr[pic]} />
       </div>
-      <div className="menu-list flex flex-col w-1/3">
+      <div className="menu-list flex flex-col w-full md:w-1/3 py-10 md:py-0">
         <div className="m-auto w-3/4">
-          <h1 className="text-4xl text-red text-center uppercase">
+          <h1 className=" text-3xl lg:text-4xl text-red text-center uppercase">
             {props.setting.name}
           </h1>
-          <ul className="text-2xl text-green  text-center">
+          <ul className="text-2xl text-green  text-center leading-12">
             {props.setting.itemList.map(i => (
               <li>
                 <button

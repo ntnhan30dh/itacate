@@ -36,15 +36,15 @@ const Video = () => {
     <section className="videoContainer relative bg-yellow mt-20">
      <span className="wave-white-top">
      </span>
-       <p className="w-1/3 mx-auto text-red text-3xl text-center pt-32  pb-10">
+       <p className=" w-3/4 lg:w-1/3 mx-auto text-red text-2xl md:text-3xl text-center pt-32  pb-10">
        Our dishes are rich of all food groups fresh ingredients and conveniently pack for you to enjoy wherever you are:
        </p>
        <Img
-          className={" iconSet w-1/4 mx-auto"}
+          className={" iconSet w-2/3 lg:w-1/4 mx-auto"}
           fluid={data.iconSet.childImageSharp.fluid}
         />
         <Img
-          className={" iconSet w-1/3 mx-auto my-20"}
+          className={" iconSet w-3/4 lg:w-1/3 mx-auto my-20"}
           fluid={data.video.childImageSharp.fluid}
         />
         <Img

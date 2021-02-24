@@ -27,22 +27,22 @@ const Menu = () => {
   return (
     <section className="menuContainer " id="menu">
       {/* <span id="menu" name="menu"></span> */}
-      <span className="before"></span>
-      <div className="pic-red-container  w-full flex relative	">
+      <span className="wave-white_down "></span>
+      <div className="pic-red-container  w-full  flex  flex-col md:flex-row relative	">
         <span className="after"></span>
         <BackgroundImage
           Tag="section"
           fluid={imageData}
           background-size="cover"
-          className="pic-container w-1/2"
+          className="pic-container w-full md:w-1/2 h-96 md:h-auto "
         ></BackgroundImage>
 
-        <div className="red-container container w-1/2 bg-red p-20 py-40">
+        <div className="red-container  w-full md:w-1/2 bg-red p-20 py-20 md:py-40">
           <Img
-            className={"w-2/3 mx-auto my-10"}
+            className={" w-2/3 md:w-11/12 lg:w-3/4 xl:w-2/3 mx-auto mb-10"}
             fluid={data.iconSet.childImageSharp.fluid}
           />
-          <p className="text-5xl text-yellow font-semibold w-2/3 mx-auto">
+          <p className="text-3xl lg:text-4xl xl:text-5xl text-center md:text-left text-yellow font-semibold w-2/3 md:w-11/12 lg:w-3/4 xl:w-2/3 mx-auto">
             Order for your movie night in or an exciting lunch time treat -
             because, let’s face it, life is always better with burritos.
           </p>
@@ -67,7 +67,7 @@ const Menu = () => {
             "Pork Burrito",
             "Veggi Buritto",
           ],
-          reverse: "translate-x-12",
+          reverse: "md:translate-x-12",
           badge: "top-8 -left-20"
         }}
       />
@@ -80,7 +80,7 @@ const Menu = () => {
             "Chicken Quesadilla ",
             "Veggi Quesadilla ",
           ],
-          reverse: "flex-row-reverse -translate-x-12",
+          reverse: "flex-row-reverse md:-translate-x-12",
           badge: "top-8 -right-20"
         }}
       />
@@ -89,7 +89,7 @@ const Menu = () => {
           border: "green",
           name: "burrito bowls",
           itemList: ["Beef bowl", "Chicken bowl", "Veggie bowl"],
-          reverse: "translate-x-12",
+          reverse: "md:translate-x-12",
           badge: "top-8 -left-20",
         }}
       />
@@ -103,7 +103,7 @@ const Menu = () => {
             "Salsa verde",
             "Salsa picante",
           ],
-          reverse: "flex-row-reverse -translate-x-12",
+          reverse: "flex-row-reverse md:-translate-x-12",
           badge: "top-8 -right-20",
         }}
       />

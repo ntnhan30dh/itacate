@@ -64,15 +64,15 @@ const Story = props => {
       <div className="storyDiv" id="story">
         {/* <span  name="story"></span> */}
         <Img
-          className={"w-1/3 mx-auto my-20"}
+          className={" w-2/3 xl:w-1/3 mx-auto my-10 md:my-20"}
           fluid={data.iconSet.childImageSharp.fluid}
         />
-        <div className="text-container container w-1/2 mx-auto text-center py-14 px-6">
-        <h1 className="text-green text-5xl font-semibold">
+        <div className="text-container container w-3/4 sm:w-2/3 xl:w-1/2 mx-auto text-center py-14 px-6">
+        <h1 className="text-green text-4xl sm:text-5xl font-semibold">
           Get your tastebuds ready, because Itacate is here to deliver fresh,
           fiery food.
         </h1>
-        <p className="text-black font-light text-2xl mt-14" >
+        <p className="text-black font-light text-xl sm:text-2xl mt-14" >
           Whatever spice level you can handle (hey, don’t judge!), we’ve got
           something for everyone and every occasion. Our favourites include
           tongue-tingling burritos and quesadillas with a choice of fillings and
@@ -84,7 +84,7 @@ const Story = props => {
           className={"w-full"}
           fluid={data.iconSetBottom.childImageSharp.fluid}
         /> */}
-        <div class="imageMarquee my-20"></div>
+        <div class="imageMarquee h-32 md:h-36 lg:h-40 xl:h-48 my-10 xl:my-20 "></div>
       </div>
     </section>
   )

@@ -74,9 +74,8 @@
     }
   }
   .imageMarquee {
-    height: 186px; /* Any size you want */
+   // height: 186px; /* Any size you want */
     background: url(../images/story-iconset-bottom.png) repeat-x 0 / 100% auto;
-    height: 200px; /* this value is not important, just not zero */
     animation: ani 10s linear infinite;
   }
   .orderNow {

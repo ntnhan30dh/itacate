@@ -12,6 +12,10 @@ module.exports = {
         red: "#d71d24",
         yellow: "#ffd250",
       },
+      lineHeight: {
+        'extra-loose': '2.5',
+        '12': '3rem',
+       }
     },
   },
   variants: {
