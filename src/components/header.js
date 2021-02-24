@@ -32,8 +32,6 @@ const Header = props => {
         </div>
         <div className={`rightDiv row ${menuActive}`}>
           <ul>
-            {/* <li></li> */}
-            {/* <li></li> */}
             <li>
               <Link to="/#story">Our Story</Link>
             </li>
@@ -41,7 +39,7 @@ const Header = props => {
               <Link to="/#menu">Menu</Link>
             </li>
             <li>
-              <Link to="/#"> <OrderNow /> </Link>
+              <Link to="/#"> <OrderNow display="text" /> </Link>
             </li>
             <li>
               <Link to="/#follow">Follow Us</Link>

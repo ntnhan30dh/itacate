@@ -21,14 +21,6 @@ const Menu = () => {
           }
         }
       }
-
-      brBeefBadget: file(relativePath: { eq: "br-beef-badget.png" }) {
-        childImageSharp {
-          fluid(quality: 90, maxWidth: 200) {
-            ...GatsbyImageSharpFluid_withWebp
-          }
-        }
-      }
     }
   `)
   const imageData = data.bg.childImageSharp.fluid
