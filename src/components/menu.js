@@ -80,7 +80,7 @@ const Menu = () => {
             "Chicken Quesadilla ",
             "Veggi Quesadilla ",
           ],
-          reverse: "flex-row-reverse md:-translate-x-12",
+          reverse: "md:flex-row-reverse md:-translate-x-12",
           badge: "top-8 -right-20"
         }}
       />
@@ -103,7 +103,7 @@ const Menu = () => {
             "Salsa verde",
             "Salsa picante",
           ],
-          reverse: "flex-row-reverse md:-translate-x-12",
+          reverse: "md:flex-row-reverse md:-translate-x-12",
           badge: "top-8 -right-20",
         }}
       />
