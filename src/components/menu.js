@@ -42,18 +42,18 @@ const Menu = () => {
             className={"w-2/3 mx-auto my-10"}
             fluid={data.iconSet.childImageSharp.fluid}
           />
-          <p className="text-4xl text-yellow font-semibold w-2/3 mx-auto">
+          <p className="text-5xl text-yellow font-semibold w-2/3 mx-auto">
             Order for your movie night in or an exciting lunch time treat -
             because, let’s face it, life is always better with burritos.
           </p>
         </div>
       </div>
       <div className="top-text w-full text-center">
-        <p className="text-black  text-xl mt-14">
+        <p className="text-black  text-2xl pt-10 ">
           Brace yourself for a Mexican feast of flavours, <br /> from cool
           guacamole to tangy salsa.
         </p>
-        <h1 className="text-green text-2xl font-semibold">
+        <h1 className="text-green text-3xl font-semibold mt-10 pb-10">
           EXPLORE OUR MENU TODAY!
         </h1>
       </div>

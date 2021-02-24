@@ -5,8 +5,8 @@ import Menu from "../components/menu"
 import Video from "../components/video"
 import Contact from "../components/contact"
 import OrderNow from "../components/ordernow"
-import 'semantic-ui-css/semantic.min.css'
 import "../styles/index.scss"
+import 'semantic-ui-css/semantic.min.css'
 
 export default function Home() {
   let [menuActive, setmenuActive] = useState(false);

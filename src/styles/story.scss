@@ -32,8 +32,8 @@
     flex-direction: column;
     position: relative;
 
-    // &:after {
-    .before {
+    
+    .wave-green_down {
       background: url(../images/wave-green.png);
       content: "";
       height: 45px;
@@ -46,8 +46,7 @@
       background-position: bottom;
     }
 
-    // &:after {
-    .after {
+    .wave-white_up {
       width: 100%;
       background: url(../images/wave-white.png);
       content: "";
@@ -80,8 +79,8 @@
     height: 200px; /* this value is not important, just not zero */
     animation: ani 10s linear infinite;
   }
-  .orderNow{
-     z-index: 1000000;
+  .orderNow {
+    z-index: 1000000;
   }
   @keyframes ani {
     0% {

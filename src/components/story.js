@@ -57,18 +57,18 @@ const Story = props => {
         opacity={0.5}
         className="bgContainer"
       >
-        <span className="before"></span>
-        <span className="after"></span>
+        <span className="wave-green_down"></span>
+        <span className="wave-white_up"></span>
         <Img className={"stickerDiv w-1/3"} fluid={data.logo.childImageSharp.fluid} />
       </BackgroundImage>
       <div className="storyDiv" id="story">
         {/* <span  name="story"></span> */}
         <Img
-          className={"w-1/3 mx-auto"}
+          className={"w-1/3 mx-auto my-20"}
           fluid={data.iconSet.childImageSharp.fluid}
         />
         <div className="text-container container w-1/2 mx-auto text-center py-14 px-6">
-        <h1 className="text-green text-4xl font-semibold">
+        <h1 className="text-green text-5xl font-semibold">
           Get your tastebuds ready, because Itacate is here to deliver fresh,
           fiery food.
         </h1>

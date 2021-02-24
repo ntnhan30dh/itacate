@@ -33,7 +33,7 @@ const Video = () => {
   `)
 
   return (
-    <section className="videoContainer relative bg-yellow">
+    <section className="videoContainer relative bg-yellow mt-20">
      <span className="wave-white-top">
      </span>
        <p className="w-1/3 mx-auto text-red text-3xl text-center pt-32  pb-10">
