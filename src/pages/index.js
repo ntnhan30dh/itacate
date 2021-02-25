@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import Header from "../components/header"
 import Story from "../components/story"
 import Menu from "../components/menu"
@@ -11,11 +11,16 @@ import Plx from "react-plx"
 
 export default function Home() {
   let [menuActive, setmenuActive] = useState(false);
+  let [vh, setVh] = useState(0);
+
   const toggleMenu = () => {
 		setmenuActive(!menuActive)
     }
    
-    let y =  window.innerHeight -170 ;
+    useEffect(() => {
+      setVh( window.innerHeight -170)
+    }, [])
+
     const parallaxMoveDown = [
       {
         start:'self',
@@ -23,7 +28,7 @@ export default function Home() {
         properties: [
           {
             startValue: 0,
-            endValue: y,
+            endValue: vh,
             endOffset: "100vh",
             property: "translateY"
           
