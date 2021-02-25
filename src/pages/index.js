@@ -7,6 +7,7 @@ import Contact from "../components/contact"
 import OrderNow from "../components/ordernow"
 import "../styles/index.scss"
 import 'semantic-ui-css/semantic.min.css'
+import Plx from "react-plx"
 
 export default function Home() {
   let [menuActive, setmenuActive] = useState(false);
@@ -14,6 +15,22 @@ export default function Home() {
 		setmenuActive(!menuActive)
     }
    
+    let y =  window.innerHeight -170 ;
+    const parallaxMoveDown = [
+      {
+        start:'self',
+        duration: 3000,
+        properties: [
+          {
+            startValue: 0,
+            endValue: y,
+            endOffset: "100vh",
+            property: "translateY"
+          
+          },
+        ],
+      },
+    ];
     
   return (
     <div className="pageWrapper">
@@ -21,9 +38,9 @@ export default function Home() {
       <title>Itacate</title>
       </head>
     <Header toggleMenu={toggleMenu} menuState={menuActive}/>
-    <div className="fixed top-3/4 right-20 orderNow  z-50">
+    <Plx parallaxData={parallaxMoveDown} className="fixed translate-y-full top-10 right-20 orderNow  z-50 mb-80">
     <OrderNow />
-        </div>
+        </Plx>
     <Story toggleMenu={toggleMenu} menuState={menuActive}/>
     <Menu/>
     <Video/>

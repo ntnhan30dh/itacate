@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import Header from "../components/header"
-import Footer from "../components/footer"
+import Contact from "../components/contact"
 import 'semantic-ui-css/semantic.min.css'
 
 import "../styles/index.scss"
@@ -15,7 +15,7 @@ export default function Home() {
   return (
     <div className="pageWrapper">
       <head>
-      <title>Wing it!</title>
+      <title>Itacate</title>
       </head>
     <Header toggleMenu={toggleMenu} menuState={menuActive}/>
     <div className="legalInfo-div">
@@ -38,7 +38,7 @@ export default function Home() {
           requests or criticism you may have.
         </p>
       </div>
-    <Footer />
+    <Contact/>
     </div>
   )
 }

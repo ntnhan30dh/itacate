@@ -1,7 +1,7 @@
 import React from "react"
 import fb from "../images/fb.png"
 import ig from "../images/ig.png"
-//import { Link } from "gatsby"
+import { Link } from "gatsby"
 
 const Contact = () => {
   return (
@@ -19,9 +19,20 @@ const Contact = () => {
           </div>
         
         </div>
-        <div className="contact-div text-center ">
-          <h1 className="text-yellow text-2xl uppercase">contact</h1>
-          <p className="text-white text-xl">hello@itacateburittos.com</p>
+        <div className="legal-div text-center ">
+          {/* <h1 className="text-yellow text-2xl uppercase">contact</h1>
+          <p className="text-white text-xl">hello@itacateburittos.com</p> */}
+          <ul text-white>
+          <li>
+            <Link to="/imprint">Imprint</Link>
+            </li>
+            <li>
+            <Link to="/privacy">Privacy Policy </Link>
+            </li>
+            <li>
+            <Link to="/disclaimer">Disclaimer</Link>
+            </li>
+        </ul>
         </div>
       </div>
     </section>

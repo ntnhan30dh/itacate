@@ -43,8 +43,7 @@ const Menu = () => {
             fluid={data.iconSet.childImageSharp.fluid}
           />
           <p className="text-3xl lg:text-4xl xl:text-5xl text-center md:text-left text-yellow font-semibold w-2/3 md:w-11/12 lg:w-3/4 xl:w-2/3 mx-auto">
-            Order for your movie night in or an exciting lunch time treat -
-            because, let’s face it, life is always better with burritos.
+          Order for your movie night or as an exciting lunch time treat - because, let’s face it, life is always better with burritos.
           </p>
         </div>
       </div>
@@ -53,7 +52,7 @@ const Menu = () => {
           Brace yourself for a Mexican feast of flavours, <br /> from cool
           guacamole to tangy salsa.
         </p>
-        <h1 className="text-green text-3xl font-semibold mt-10 pb-10">
+        <h1 className="text-green text-4xl sm:text-5xl font-semibold mt-10 pb-10">
           EXPLORE OUR MENU TODAY!
         </h1>
       </div>
@@ -68,7 +67,7 @@ const Menu = () => {
             "Veggi Buritto",
           ],
           reverse: "md:translate-x-12",
-          badge: "top-8 -left-20"
+          badge: "top-14 -left-20"
         }}
       />
       <MenuItem
@@ -81,16 +80,16 @@ const Menu = () => {
             "Veggi Quesadilla ",
           ],
           reverse: "md:flex-row-reverse md:-translate-x-12",
-          badge: "top-8 -right-20"
+          badge: "top-20 -right-20"
         }}
       />
       <MenuItem
         setting={{
           border: "green",
           name: "burrito bowls",
-          itemList: ["Beef bowl", "Chicken bowl", "Veggie bowl"],
+          itemList: ["Beef Bowl", "Chicken Bowl", "Veggie Bowl"],
           reverse: "md:translate-x-12",
-          badge: "top-8 -left-20",
+          badge: "top-16 -left-20",
         }}
       />
       <MenuItem
@@ -99,12 +98,12 @@ const Menu = () => {
           name: "salsas",
           itemList: [
             "Guacamole ",
-            "Salsa roja",
-            "Salsa verde",
-            "Salsa picante",
+            "Salsa Roja",
+            "Salsa Verde",
+            "Salsa Picante",
           ],
           reverse: "md:flex-row-reverse md:-translate-x-12",
-          badge: "top-8 -right-20",
+          badge: "top-16 -right-20",
         }}
       />
     </section>

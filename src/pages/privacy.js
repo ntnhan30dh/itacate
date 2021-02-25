@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import Header from "../components/header"
-import Footer from "../components/footer"
+import Contact from "../components/contact"
 import 'semantic-ui-css/semantic.min.css'
 
 import "../styles/index.scss"
@@ -15,7 +15,7 @@ export default function Home() {
   return (
     <div className="pageWrapper">
       <head>
-      <title>Wing it!</title>
+      <title>Itacate</title>
       </head>
     <Header toggleMenu={toggleMenu} menuState={menuActive}/>
     <div className="legalInfo-div">
@@ -36,7 +36,7 @@ export default function Home() {
         </p>
         <p>
           All information will be processed by the Data Controller: <br />
-          Wing It! Delivery Hero SE <br />
+          Delivery Hero SE <br />
           Oranienburger Straße 70 <br />
           10117 Berlin <br />
           If you require additional information or have any concerns about the
@@ -215,7 +215,7 @@ export default function Home() {
         </p>
         <h2>Cookie Information</h2>
         <p>
-          In order for your visit to Wing It! website to be attractive and to enable
+          In order for your visit to Itacate website to be attractive and to enable
           the use of certain functions, we use the so-called cookies on various
           pages. Cookies are small text files that are stored in your browser.
           Some of the cookies we use are deleted after the end of the operation
@@ -263,7 +263,7 @@ export default function Home() {
           get in touch with us.
         </p>
       </div>
-    <Footer />
+    <Contact />
     </div>
   )
 }

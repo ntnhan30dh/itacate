@@ -84,7 +84,7 @@ const Story = props => {
           className={"w-full"}
           fluid={data.iconSetBottom.childImageSharp.fluid}
         /> */}
-        <div class="imageMarquee h-32 md:h-36 lg:h-40 xl:h-48 my-10 xl:my-20 "></div>
+        <div class="imageMarquee h-24 md:h-28 lg:h-32 xl:h-40 my-10 xl:my-20 "></div>
       </div>
     </section>
   )

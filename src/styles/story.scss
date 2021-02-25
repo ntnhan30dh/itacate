@@ -75,7 +75,7 @@
   }
   .imageMarquee {
    // height: 186px; /* Any size you want */
-    background: url(../images/story-iconset-bottom.png) repeat-x 0 / 100% auto;
+    background: url(../images/story-iconset-bottom.png) repeat-x 0 / 80% auto;
     animation: ani 10s linear infinite;
   }
   .orderNow {
@@ -86,7 +86,7 @@
       background-position: 0 0;
     }
     100% {
-      background-position: 100vw 0;
+      background-position: 80vw 0;
     }
   }
 }
