@@ -3,9 +3,14 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     borderWidth: {
+    '10': '10px',
      '15': '15px',
     },
     extend: {
+      screens: {
+        'xxsm': '400px',
+        'xsm': '500px',
+      },
       colors: {
         green: "#0b9446",
         black: "#2a2c2a",

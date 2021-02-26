@@ -43,7 +43,7 @@ export default function Home() {
       <title>Itacate</title>
       </head>
     <Header toggleMenu={toggleMenu} menuState={menuActive}/>
-    <Plx parallaxData={parallaxMoveDown} className="fixed translate-y-full top-10 right-20 orderNow  z-50 mb-80">
+    <Plx parallaxData={parallaxMoveDown} className=" hidden md:block fixed translate-y-full top-4 lg:top-10 right-4 lg:right-20 orderNow  z-50 mb-80">
     <OrderNow />
         </Plx>
     <Story toggleMenu={toggleMenu} menuState={menuActive}/>

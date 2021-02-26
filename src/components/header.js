@@ -14,7 +14,7 @@ const Header = props => {
       <nav className="nav">
         <div className={`leftDiv `}>
           <Link to="/">
-            <div className={`container ${hidden}  img_div`}>
+            <div className={`container ${hidden}  img_div w-36 lg:w-48`}>
               <img src={logo} alt="logo" />
             </div>
           </Link>
@@ -31,7 +31,7 @@ const Header = props => {
           </div>
         </div>
         <div className={`rightDiv row ${menuActive}`}>
-          <ul>
+          <ul className="text-xl lg:text-2xl">
             <li>
               <Link to="/#story">Our Story</Link>
             </li>

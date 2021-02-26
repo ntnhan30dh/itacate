@@ -37,22 +37,23 @@ const Menu = () => {
           className="pic-container w-full md:w-1/2 h-96 md:h-auto "
         ></BackgroundImage>
 
-        <div className="red-container  w-full md:w-1/2 bg-red p-20 py-20 md:py-40">
+        <div className="red-container  w-full md:w-1/2 bg-red px-4 xsm:px-20 py-20 md:py-40">
           <Img
-            className={" w-2/3 md:w-11/12 lg:w-3/4 xl:w-2/3 mx-auto mb-10"}
+            className={" w-11/12 xsm:w-2/3 md:w-11/12 lg:w-3/4 xl:w-2/3 mx-auto mb-10"}
             fluid={data.iconSet.childImageSharp.fluid}
           />
-          <p className="text-3xl lg:text-4xl xl:text-5xl text-center md:text-left text-yellow font-semibold w-2/3 md:w-11/12 lg:w-3/4 xl:w-2/3 mx-auto">
-          Order for your movie night or as an exciting lunch time treat - because, let’s face it, life is always better with burritos.
+          <p className="text-3xl lg:text-4xl xl:text-5xl text-center md:text-left text-yellow font-semibold w-11/12 xsm:w-2/3 md:w-11/12 lg:w-3/4 xl:w-2/3 mx-auto pb-10 md:pb-0">
+            Order for your movie night or as an exciting lunch time treat -
+            because, let’s face it, life is always better with burritos.
           </p>
         </div>
       </div>
       <div className="top-text w-full text-center">
-        <p className="text-black  text-2xl pt-10 ">
+        <p className="text-black text-xl xxsm:text-2xl xxsm:pt-10 ">
           Brace yourself for a Mexican feast of flavours, <br /> from cool
           guacamole to tangy salsa.
         </p>
-        <h1 className="text-green text-4xl sm:text-5xl font-semibold mt-10 pb-10">
+        <h1 className="text-green text-2xl xxsm:text-4xl sm:text-5xl font-semibold mt-10 xxsm:pb-10">
           EXPLORE OUR MENU TODAY!
         </h1>
       </div>
@@ -67,7 +68,7 @@ const Menu = () => {
             "Veggi Buritto",
           ],
           reverse: "md:translate-x-12",
-          badge: "top-14 -left-20"
+          badge: "top-14 -left-14 xsm:-left-20",
         }}
       />
       <MenuItem
@@ -80,7 +81,7 @@ const Menu = () => {
             "Veggi Quesadilla ",
           ],
           reverse: "md:flex-row-reverse md:-translate-x-12",
-          badge: "top-20 -right-20"
+          badge: "top-20 -right-14 xsm:-right-20",
         }}
       />
       <MenuItem
@@ -89,7 +90,7 @@ const Menu = () => {
           name: "burrito bowls",
           itemList: ["Beef Bowl", "Chicken Bowl", "Veggie Bowl"],
           reverse: "md:translate-x-12",
-          badge: "top-16 -left-20",
+          badge: "top-16 -left-14 xsm:-left-20",
         }}
       />
       <MenuItem
@@ -103,7 +104,7 @@ const Menu = () => {
             "Salsa Picante",
           ],
           reverse: "md:flex-row-reverse md:-translate-x-12",
-          badge: "top-16 -right-20",
+          badge: "top-16 -right-14 xsm:-right-20",
         }}
       />
     </section>

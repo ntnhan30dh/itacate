@@ -233,9 +233,9 @@ const MenuItem = props => {
 
   return (
     <div
-      className={`menu-item-container flex flex-col md:flex-row border-15 border-${props.setting.border} w-3/4 lg:w-2/3 xl:w-1/2 mx-auto my-12  transform  ${props.setting.reverse}`}
+      className={`menu-item-container flex flex-col md:flex-row border-10 xsm:border-15 border-${props.setting.border} w-3/4 lg:w-2/3 xl:w-1/2 mx-auto my-12  transform  ${props.setting.reverse}`}
     >
-        <div className={`absolute w-32 md:w-1/6 z-50 ${props.setting.badge}`}>
+        <div className={`absolute w-24 xsm:w-32 md:w-1/6 z-50 ${props.setting.badge}`}>
           <Img className={"badget w-full"} fluid={badgeArr[pic]} />
         </div>
       <div className="relative w-full md:w-2/3 overflow-hidden">

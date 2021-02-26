@@ -67,10 +67,10 @@
     }
 
     .img_div {
-      width: 169px;
-      @media screen and (max-width: $phone) {
-        width: 100px;
-      }
+      // width: 169px;
+      // @media screen and (max-width: $phone) {
+      //   width: 100px;
+      // }
       img {
         width: 100%;
       }
@@ -105,7 +105,7 @@
       li {
 
         a , button{
-          font-size: 22px;
+         // font-size: 22px;
           font-weight: 500;
           letter-spacing: 0.92px;
           text-align: center;
