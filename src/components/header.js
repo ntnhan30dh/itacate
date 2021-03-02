@@ -14,12 +14,12 @@ const Header = props => {
       <nav className="nav">
         <div className={`leftDiv `}>
           <Link to="/">
-            <div className={`container ${hidden}  img_div w-36 lg:w-48`}>
+            <div className={`container ${hidden}  img_div w-36 lg:w-48 mr-8`}>
               <img src={logo} alt="logo" />
             </div>
           </Link>
           <div
-            className={`burgerMenu ml-8 ${change}`}
+            className={`burgerMenu md:ml-8 ${change}`}
             onClick={props.toggleMenu}
             onKeyDown={props.toggleMenu}
             role="button"
@@ -31,7 +31,7 @@ const Header = props => {
           </div>
         </div>
         <div className={`rightDiv row ${menuActive}`}>
-          <ul className="text-xl lg:text-2xl">
+          <ul className="text:sm sm:text-lg md:text-xl lg:text-2xl">
             <li>
               <Link to="/#story">Our Story</Link>
             </li>

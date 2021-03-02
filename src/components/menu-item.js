@@ -157,10 +157,10 @@ const MenuItem = props => {
   const picsSrc = {
     burritos: {
       pics: [
-        data.burritoBeef.childImageSharp.fluid,
         data.burritoChicken.childImageSharp.fluid,
-        data.burritoPork.childImageSharp.fluid,
         data.burritoVeggie.childImageSharp.fluid,
+        data.burritoBeef.childImageSharp.fluid,
+        data.burritoPork.childImageSharp.fluid,
       ],
       badges: [
         data.brBeefBadge.childImageSharp.fluid,
@@ -171,9 +171,9 @@ const MenuItem = props => {
     },
     quesadillas: {
       pics: [
-        data.quesadillaBeef.childImageSharp.fluid,
         data.quesadillaChicken.childImageSharp.fluid,
         data.quesadillaVeggie.childImageSharp.fluid,
+        data.quesadillaBeef.childImageSharp.fluid,
       ],
       badges: [
         data.brBeefBadge.childImageSharp.fluid,
@@ -185,9 +185,9 @@ const MenuItem = props => {
 
     "burrito bowls": {
       pics: [
-        data.burritoBowlBeef.childImageSharp.fluid,
         data.burritoBowlChicken.childImageSharp.fluid,
         data.burritoBowlVeggie.childImageSharp.fluid,
+        data.burritoBowlBeef.childImageSharp.fluid,
       ],
 
       badges: [
@@ -199,10 +199,10 @@ const MenuItem = props => {
     },
     salsas: {
       pics: [
+        data.dipPicante.childImageSharp.fluid,
+        data.dipVerde.childImageSharp.fluid,
         data.dipQuacamole.childImageSharp.fluid,
         data.dipRoja.childImageSharp.fluid,
-        data.dipVerde.childImageSharp.fluid,
-        data.dipPicante.childImageSharp.fluid,
       ],
       badges: [
         data.brBeefBadge.childImageSharp.fluid,

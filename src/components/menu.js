@@ -62,12 +62,12 @@ const Menu = () => {
           border: "green",
           name: "burritos",
           itemList: [
-            "Beef Burrito",
             "Chicken Burrito",
-            "Pork Burrito",
             "Veggi Buritto",
+            "Beef Burrito",
+            "Pork Burrito",
           ],
-          reverse: "md:translate-x-12",
+          reverse: "md:translate-x-8",
           badge: "top-14 -left-14 xsm:-left-20",
         }}
       />
@@ -76,11 +76,11 @@ const Menu = () => {
           border: "yellow",
           name: "quesadillas",
           itemList: [
-            "Beef Quesadilla ",
             "Chicken Quesadilla ",
             "Veggi Quesadilla ",
+            "Beef Quesadilla ",
           ],
-          reverse: "md:flex-row-reverse md:-translate-x-12",
+          reverse: "md:flex-row-reverse md:-translate-x-8",
           badge: "top-20 -right-14 xsm:-right-20",
         }}
       />
@@ -88,8 +88,8 @@ const Menu = () => {
         setting={{
           border: "green",
           name: "burrito bowls",
-          itemList: ["Beef Bowl", "Chicken Bowl", "Veggie Bowl"],
-          reverse: "md:translate-x-12",
+          itemList: [ "Chicken Bowl", "Veggie Bowl","Beef Bowl"],
+          reverse: "md:translate-x-8",
           badge: "top-16 -left-14 xsm:-left-20",
         }}
       />
@@ -98,12 +98,12 @@ const Menu = () => {
           border: "red",
           name: "salsas",
           itemList: [
+            "Salsa Picante",
+            "Salsa Verde",
             "Guacamole ",
             "Salsa Roja",
-            "Salsa Verde",
-            "Salsa Picante",
           ],
-          reverse: "md:flex-row-reverse md:-translate-x-12",
+          reverse: "md:flex-row-reverse md:-translate-x-8",
           badge: "top-16 -right-14 xsm:-right-20",
         }}
       />

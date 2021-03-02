@@ -59,7 +59,7 @@ const Story = props => {
       >
         <span className="wave-green_down"></span>
         <span className="wave-white_up"></span>
-        <Img className={" w-2/3 sm:w-2/5 md:w-1/3"} fluid={data.logo.childImageSharp.fluid} />
+        <Img className={" w-2/3 xxsm:w-1/2 xsm:w-2/5 lg:w-1/3"} fluid={data.logo.childImageSharp.fluid} />
       </BackgroundImage>
       <div className="storyDiv" id="story">
         {/* <span  name="story"></span> */}
