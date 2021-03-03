@@ -1,12 +1,10 @@
 .sticky{
   position: relative;
-  // top: 0;
    z-index: 49;
    min-height: auto !important;
 }
 
 .nav {
- // position: fixed;
   top: 0;
   z-index: 10;
   width: 100%;
@@ -18,7 +16,6 @@
   padding: 0 5%;
   padding-top: 2%;
   padding-bottom: 1%;
-  // background-color: $green;
   background-image: url(../images/wave-green.png);
   
 
@@ -30,7 +27,6 @@
   }
   .leftDiv{
     @media screen and (max-width: $phone) {
-      //width: 20%;
       display: flex;
       flex-direction: row;
       justify-content: center;
@@ -68,10 +64,6 @@
     }
 
     .img_div {
-      // width: 169px;
-      // @media screen and (max-width: $phone) {
-      //   width: 100px;
-      // }
       img {
         width: 100%;
       }
@@ -107,14 +99,12 @@
       li {
 
         a , button{
-         // font-size: 22px;
           font-weight: 500;
           letter-spacing: 0.92px;
           text-align: center;
           color: $yellow;
           text-decoration: none;
           text-transform: uppercase;
-          // border: 1px solid red;
           &:hover {
             color: $green;
             background-color: $yellow;
@@ -131,9 +121,6 @@
           @media screen and (max-width: 400px) {
             font-size: 12px;
           }
-        //   @media screen and (max-width: 400px) {
-        //     font-size: 9px;
-        // }
         }
       }
     }

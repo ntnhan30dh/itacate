@@ -14,7 +14,7 @@ const Contact = () => {
           <img className="w-full" src={fb} alt="facebook" />
         </div>
         <div className="igDiv w-10">
-          <img className="w-full" src={ig} alt="facebook" />
+          <img className="w-full" src={ig} alt="instagram" />
         </div>
           </div>
         

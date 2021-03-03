@@ -29,7 +29,7 @@ const Menu = () => {
       {/* <span id="menu" name="menu"></span> */}
       <span className="wave-white_down "></span>
       <div className="pic-red-container  w-full  flex  flex-col md:flex-row relative	">
-        <span className="after"></span>
+        <span className="wave-white_up"></span>
         <BackgroundImage
           Tag="section"
           fluid={imageData}

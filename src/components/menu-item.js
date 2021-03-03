@@ -128,6 +128,41 @@ const MenuItem = props => {
           }
         }
       }
+
+      brChickenBadge: file(relativePath: { eq: "badge__chicken-burrito.png" }) {
+        childImageSharp {
+          fluid(quality: 90, maxWidth: 200) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+
+      brVeggiBadge: file(relativePath: { eq: "badge__veggi-burrito.png" }) {
+        childImageSharp {
+          fluid(quality: 90, maxWidth: 200) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+
+      brPorkBadge: file(relativePath: { eq: "badge__pork-burrito.png" }) {
+        childImageSharp {
+          fluid(quality: 90, maxWidth: 200) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+
+      queChickenBadge: file(
+        relativePath: { eq: "badge__chicken-quesadillas.png" }
+      ) {
+        childImageSharp {
+          fluid(quality: 90, maxWidth: 200) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+
       queVeggieBadge: file(relativePath: { eq: "que-veggie-badge.png" }) {
         childImageSharp {
           fluid(quality: 90, maxWidth: 200) {
@@ -136,7 +171,39 @@ const MenuItem = props => {
         }
       }
 
-      bowlChickenBadge: file(relativePath: { eq: "bowl-chicken-badge.png" }) {
+      queBeefBadge: file(relativePath: { eq: "badge__beef-quesadillas.png" }) {
+        childImageSharp {
+          fluid(quality: 90, maxWidth: 200) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+
+      bowlChickenBadge: file(relativePath: { eq: "badge__chicken-bowl.png" }) {
+        childImageSharp {
+          fluid(quality: 90, maxWidth: 200) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+
+      bowlVeggiBadge: file(relativePath: { eq: "badge__veggi-bowl.png" }) {
+        childImageSharp {
+          fluid(quality: 90, maxWidth: 200) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+
+      bowlBeefBadge: file(relativePath: { eq: "badge__beef-bowl.png" }) {
+        childImageSharp {
+          fluid(quality: 90, maxWidth: 200) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+
+      salPicanteBadge: file(relativePath: { eq: "badge__sala-picante.png" }) {
         childImageSharp {
           fluid(quality: 90, maxWidth: 200) {
             ...GatsbyImageSharpFluid_withWebp
@@ -145,6 +212,22 @@ const MenuItem = props => {
       }
 
       salVerdeBadge: file(relativePath: { eq: "sal-verde-badge.png" }) {
+        childImageSharp {
+          fluid(quality: 90, maxWidth: 200) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+
+      salGuacamoleBadge: file(relativePath: { eq: "badge__guacamole.png" }) {
+        childImageSharp {
+          fluid(quality: 90, maxWidth: 200) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+
+      salRojaBadge: file(relativePath: { eq: "badge__salsa-roja.png" }) {
         childImageSharp {
           fluid(quality: 90, maxWidth: 200) {
             ...GatsbyImageSharpFluid_withWebp
@@ -163,10 +246,10 @@ const MenuItem = props => {
         data.burritoPork.childImageSharp.fluid,
       ],
       badges: [
+        data.brChickenBadge.childImageSharp.fluid,
+        data.brVeggiBadge.childImageSharp.fluid,
         data.brBeefBadge.childImageSharp.fluid,
-        data.queVeggieBadge.childImageSharp.fluid,
-        data.bowlChickenBadge.childImageSharp.fluid,
-        data.salVerdeBadge.childImageSharp.fluid,
+        data.brPorkBadge.childImageSharp.fluid,
       ],
     },
     quesadillas: {
@@ -176,10 +259,9 @@ const MenuItem = props => {
         data.quesadillaBeef.childImageSharp.fluid,
       ],
       badges: [
-        data.brBeefBadge.childImageSharp.fluid,
+        data.queChickenBadge.childImageSharp.fluid,
         data.queVeggieBadge.childImageSharp.fluid,
-        data.bowlChickenBadge.childImageSharp.fluid,
-        data.salVerdeBadge.childImageSharp.fluid,
+        data.queBeefBadge.childImageSharp.fluid,
       ],
     },
 
@@ -191,10 +273,9 @@ const MenuItem = props => {
       ],
 
       badges: [
-        data.brBeefBadge.childImageSharp.fluid,
-        data.queVeggieBadge.childImageSharp.fluid,
         data.bowlChickenBadge.childImageSharp.fluid,
-        data.salVerdeBadge.childImageSharp.fluid,
+        data.bowlVeggiBadge.childImageSharp.fluid,
+        data.bowlBeefBadge.childImageSharp.fluid,
       ],
     },
     salsas: {
@@ -205,10 +286,10 @@ const MenuItem = props => {
         data.dipRoja.childImageSharp.fluid,
       ],
       badges: [
-        data.brBeefBadge.childImageSharp.fluid,
-        data.queVeggieBadge.childImageSharp.fluid,
-        data.bowlChickenBadge.childImageSharp.fluid,
+        data.salPicanteBadge.childImageSharp.fluid,
         data.salVerdeBadge.childImageSharp.fluid,
+        data.salGuacamoleBadge.childImageSharp.fluid,
+        data.salRojaBadge.childImageSharp.fluid,
       ],
     },
   }
@@ -235,9 +316,11 @@ const MenuItem = props => {
     <div
       className={`menu-item-container flex flex-col md:flex-row border-10 xsm:border-15 border-${props.setting.border} w-3/4 lg:w-2/3 xl:w-1/2 mx-auto my-12  transform  ${props.setting.reverse}`}
     >
-        <div className={`absolute w-24 xsm:w-32 md:w-1/6 z-50 ${props.setting.badge}`}>
-          <Img className={"badget w-full"} fluid={badgeArr[pic]} />
-        </div>
+      <div
+        className={`absolute w-24 xsm:w-32 md:w-1/6 z-50 ${props.setting.badge}`}
+      >
+        <Img className={"badget w-full"} fluid={badgeArr[pic]} />
+      </div>
       <div className="relative w-full md:w-2/3 overflow-hidden">
         <div className="absolute w-full bottom-0 top-0">
           <Img
