@@ -22,13 +22,6 @@ const Video = () => {
           }
         }
       }
-      iconBottom: file(relativePath: { eq: "video-icons-bottom.png" }) {
-        childImageSharp {
-          fluid(quality: 90, maxWidth: 1000) {
-            ...GatsbyImageSharpFluid_withWebp
-          }
-        }
-      }
     }
   `)
 
@@ -46,12 +39,7 @@ const Video = () => {
           className={" iconSet w-3/4 lg:w-2/5 mx-auto my-20"}
           fluid={data.video.childImageSharp.fluid}
         />
-        {/* <Img
-          className={" iconSet w-full my-24 "}
-          fluid={data.iconBottom.childImageSharp.fluid}
-        /> */}
         <div className="icon-div h-24 md:h-28 lg:h-32 xl:h-40 my-24">
-
         </div>
         <div>hi</div>
         <span className="wave-green-bottom"></span>

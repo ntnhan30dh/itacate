@@ -2,22 +2,7 @@
   width: 100%;
   position: relative;
   transition: 1s;
-  // &:after {
-  //   width: 100%;
-  //   // background: url(../images/wave-yellow.png);
-  //   background: url(../images/wave-yellow-new.png);
-  //   content: "";
-  //   height: 44px;
-  //   position: absolute;
-  //   bottom: -44px;
-  //   left: 0;
-  //   background-repeat: repeat-x;
-  //   // background-color: blue;
-  //   @media screen and (min-width: 1400px) {
-  //     background-repeat: round;
-  //   }
-  // }
-
+ 
   .waveDiv {
     width: 100%;
   }
@@ -58,7 +43,7 @@
       background-size: cover;
       background-position: top;
       @media screen and (min-width: 1400px) {
-        // background-repeat: round;
+   
       }
     }
     @media screen and (max-width: $break-large) {

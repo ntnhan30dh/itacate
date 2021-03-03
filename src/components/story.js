@@ -36,14 +36,6 @@ const Story = props => {
           }
         }
       }
-
-      iconSetBottom: file(relativePath: { eq: "story-iconset-bottom.png" }) {
-        childImageSharp {
-          fluid(quality: 90, maxWidth: 2000) {
-            ...GatsbyImageSharpFluid_withWebp
-          }
-        }
-      }
     }
   `)
   let nudge = props.menuState ? "nudge" : ""
@@ -80,10 +72,7 @@ const Story = props => {
           and enjoy.
         </p>
         </div>
-        {/* <Img
-          className={"w-full"}
-          fluid={data.iconSetBottom.childImageSharp.fluid}
-        /> */}
+       
         <div class="imageMarquee h-16 xms:h-24 md:h-28 lg:h-32 xl:h-40 xsm:my-10 xl:my-20 "></div>
       </div>
     </section>
