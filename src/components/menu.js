@@ -7,7 +7,7 @@ import MenuItem from "./menu-item"
 const Menu = () => {
   const data = useStaticQuery(graphql`
     {
-      bg: file(relativePath: { eq: "burrito-combo-x3.png" }) {
+      bg: file(relativePath: { eq: "burrito-combo-x3_center.png" }) {
         childImageSharp {
           fluid(quality: 90, maxWidth: 1000) {
             ...GatsbyImageSharpFluid_withWebp

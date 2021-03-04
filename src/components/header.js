@@ -31,7 +31,7 @@ const Header = props => {
           </div>
         </div>
         <div className={`rightDiv row ${menuActive}`}>
-          <ul className="text:sm sm:text-lg md:text-xl lg:text-2xl">
+          <ul className="text:sm sm:text-lg md:text-xl lg:text-2xl w-9/12 sm:w-4/6">
             <li>
               <Link to="/#story">Our Story</Link>
             </li>
@@ -39,15 +39,16 @@ const Header = props => {
               <Link to="/#menu">Menu</Link>
             </li>
             <li>
-              <Link to="/#"> <OrderNow display="text" /> </Link>
-            </li>
-            <li>
               <Link to="/#follow">Follow Us</Link>
             </li>
             <li>
               <Link to="/#follow">Contact</Link>
             </li>
+            {/* <li>
+              <Link to="/#">  </Link>
+            </li> */}
           </ul>
+            <OrderNow />
           
         </div>
       </nav>

@@ -31,7 +31,7 @@ function OrderNow(props) {
             "ORDER NOW"
           ) : (
             <Img
-              className="w-24 lg:w-28 orderNow"
+              className=" w-16 xsm:w-20 sm:w-24 lg:w-28 orderNow"
               fluid={data.orderNow.childImageSharp.fluid}
             />
           )}
