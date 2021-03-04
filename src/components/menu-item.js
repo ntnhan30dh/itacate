@@ -121,7 +121,7 @@ const MenuItem = props => {
         }
       }
 
-      brBeefBadge: file(relativePath: { eq: "br-beef-badge.png" }) {
+      brBeefBadge: file(relativePath: { eq: "badge__beef-burrito.png" }) {
         childImageSharp {
           fluid(quality: 90, maxWidth: 200) {
             ...GatsbyImageSharpFluid_withWebp
@@ -163,7 +163,7 @@ const MenuItem = props => {
         }
       }
 
-      queVeggieBadge: file(relativePath: { eq: "que-veggie-badge.png" }) {
+      queVeggieBadge: file(relativePath: { eq: "badge__veggi-quesadillas.png" }) {
         childImageSharp {
           fluid(quality: 90, maxWidth: 200) {
             ...GatsbyImageSharpFluid_withWebp
@@ -211,7 +211,7 @@ const MenuItem = props => {
         }
       }
 
-      salVerdeBadge: file(relativePath: { eq: "sal-verde-badge.png" }) {
+      salVerdeBadge: file(relativePath: { eq: "badge__salsa-verde.png" }) {
         childImageSharp {
           fluid(quality: 90, maxWidth: 200) {
             ...GatsbyImageSharpFluid_withWebp
