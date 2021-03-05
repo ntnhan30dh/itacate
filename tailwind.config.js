@@ -25,6 +25,10 @@ module.exports = {
         "extra-loose": "2.5",
         12: "3rem",
       },
+      width: {
+        '30': '30%',
+       
+      },
     },
   },
   variants: {

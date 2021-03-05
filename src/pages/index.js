@@ -2,7 +2,7 @@ import React, { useState} from "react"
 import Header from "../components/header"
 import Story from "../components/story"
 import Menu from "../components/menu"
-import Video from "../components/video"
+import Followus from "../components/followus"
 import Contact from "../components/contact"
 // import OrderNow from "../components/ordernow"
 import "../styles/index.scss"
@@ -48,7 +48,7 @@ export default function Home() {
         </Plx> */}
     <Story toggleMenu={toggleMenu} menuState={menuActive}/>
     <Menu/>
-    <Video/>
+    <Followus/>
     <Contact/>
     </div>
   )
