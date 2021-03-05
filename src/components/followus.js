@@ -51,12 +51,12 @@ const Followus = () => {
   return (
     <section className="videoContainer relative bg-yellow xsm:mt-20">
       <span className="wave-white-top"></span>
-      <p className=" w-4/5 lg:w-2/5 mx-auto text-red text-xl xxsm:text-2xl md:text-3xl text-center pt-32  pb-10">
+      <p className=" w-2/3  xl:w-2/5   mx-auto text-red text-2xl  md:text-3xl text-center pt-32  pb-10">
         Our dishes cover all food groups, full of fresh ingredients and
         conveniently packed for you to enjoy wherever you are.{" "}
       </p>
       <Img
-        className={" iconSet w-2/3 lg:w-2/5 mx-auto"}
+        className={" iconSet w-2/3 xl:w-1/3 mx-auto"}
         fluid={data.iconSet.childImageSharp.fluid}
       />
       {/* <Img
