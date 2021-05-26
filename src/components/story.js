@@ -2,6 +2,8 @@ import React from "react"
 import Img from "gatsby-image"
 import { graphql, useStaticQuery } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
+import { useIntl } from "gatsby-plugin-intl"
+
 
 const Story = props => {
   const data = useStaticQuery(graphql`
@@ -20,7 +22,14 @@ const Story = props => {
           }
         }
       }
-
+      
+      logo_es: file(relativePath: { eq: "header-logo_es.png" }) {
+        childImageSharp {
+          fluid(quality: 90, maxWidth: 480) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
       orderNow: file(relativePath: { eq: "order-now.png" }) {
         childImageSharp {
           fluid(quality: 90, maxWidth: 480) {
@@ -40,6 +49,7 @@ const Story = props => {
   `)
   let nudge = props.menuState ? "nudge" : ""
   const imageData = data.bgBig.childImageSharp.fluid
+  const intl = useIntl()
   return (
     <section className={`storyContainer ${nudge}`}>
       <BackgroundImage
@@ -51,7 +61,7 @@ const Story = props => {
       >
         <span className="wave-green_down"></span>
         <span className="wave-white_up"></span>
-        <Img className={" w-2/3 xxsm:w-1/2 xsm:w-2/5 lg:w-1/3"} fluid={data.logo.childImageSharp.fluid} />
+        <Img className={" w-2/3 xxsm:w-1/2 xsm:w-2/5 lg:w-1/3"} fluid={intl.locale === "en" ?data.logo.childImageSharp.fluid:data.logo_es.childImageSharp.fluid} />
       </BackgroundImage>
       <div className="storyDiv" id="story">
         {/* <span  name="story"></span> */}
@@ -61,15 +71,10 @@ const Story = props => {
         />
         <div className="text-container container xsm:w-3/4 sm:w-2/3 xl:w-1/2 mx-auto text-center py-14 px-6">
         <h1 className="text-green text-4xl sm:text-5xl font-semibold">
-          Get your tastebuds ready, because Itacate is here to deliver fresh,
-          fiery food.
+        {intl.formatMessage({ id: "story head" })}
         </h1>
         <p className="text-black font-light text-xl sm:text-2xl mt-14" >
-          Whatever spice level you can handle (hey, don’t judge!), we’ve got
-          something for everyone and every occasion. Our favourites include
-          tongue-tingling burritos and quesadillas with a choice of fillings and
-          traditional salads, all carefully prepared for you to simply unwrap
-          and enjoy.
+        {intl.formatMessage({ id: "story p" })}
         </p>
         </div>
        

@@ -3,6 +3,8 @@ import { graphql, useStaticQuery } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
 import Img from "gatsby-image"
 import MenuItem from "./menu-item"
+import { useIntl } from "gatsby-plugin-intl"
+
 
 const Menu = () => {
   const data = useStaticQuery(graphql`
@@ -24,6 +26,8 @@ const Menu = () => {
     }
   `)
   const imageData = data.bg.childImageSharp.fluid
+
+  const intl = useIntl()
   return (
     <section className="menuContainer " id="menu">
       {/* <span id="menu" name="menu"></span> */}
@@ -43,18 +47,18 @@ const Menu = () => {
             fluid={data.iconSet.childImageSharp.fluid}
           />
           <p className="text-3xl lg:text-4xl xl:text-5xl text-center md:text-left text-yellow font-semibold w-11/12 xsm:w-2/3 md:w-11/12 lg:w-3/4 xl:w-2/3 mx-auto pb-10 md:pb-0">
-            Order for your movie night or as an exciting lunch time treat -
-            because, let’s face it, life is always better with burritos.
+          {intl.formatMessage({ id: "menu p1" })}
+
           </p>
         </div>
       </div>
       <div className="top-text w-full text-center">
         <p className="text-black text-xl xxsm:text-2xl xxsm:pt-10 ">
-          Brace yourself for a Mexican feast of flavours, <br /> from cool
-          guacamole to tangy salsa.
+        {intl.formatMessage({ id: "menu p2.1" })}  <br /> {intl.formatMessage({ id: "menu p2.2" })}
         </p>
         <h1 className="text-green text-2xl xxsm:text-4xl sm:text-5xl font-semibold mt-10 xxsm:pb-10">
-          EXPLORE OUR MENU TODAY!
+        {intl.formatMessage({ id: "menu head" })}
+         
         </h1>
       </div>
       <MenuItem

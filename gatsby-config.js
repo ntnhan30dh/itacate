@@ -21,8 +21,22 @@ module.exports = {
       path: path.join(__dirname, `src`, `images`),
     },
   },
+  {
+    resolve: `gatsby-plugin-intl`,
+    options: {
+      // Directory with the strings JSON
+      path: `${__dirname}/src/intl`,
+      // Supported languages
+      languages: [`es`, `en`],
+      // Default site language
+      defaultLanguage: `en`,
+      // Redirects to `/pt` in the route `/`
+      redirect: false,
+    },
+  },
   `gatsby-plugin-sharp`,
   `gatsby-transformer-sharp`,
-  'gatsby-plugin-postcss'
+  'gatsby-plugin-postcss',
+  
 ],
 }
