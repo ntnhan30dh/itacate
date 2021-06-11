@@ -2,8 +2,11 @@ import React from "react"
 import fb from "../images/fb.png"
 import ig from "../images/ig.png"
 import { Link } from "gatsby"
+import { useIntl } from "gatsby-plugin-intl"
 
 const Contact = () => {
+  const intl = useIntl()
+  const locale = intl.locale !== "es" ? `/${intl.locale}` : ""
   return (
     <section className="contactContainer bg-green" id="follow">
       <div className="center-div w-2/3 md:w-1/2 lg:w-1/3 xl:w-1/4 mx-auto flex justify-between pt-0 py-10 xsm:py-14">
@@ -13,9 +16,11 @@ const Contact = () => {
           <div className="fbDiv w-10">
           <img className="w-full" src={fb} alt="facebook" />
         </div>
-        <div className="igDiv w-10">
+        {intl.locale === "es"?  <Link to="https://www.instagram.com/itacate_cl/" target="_blank" className="igDiv w-10">
           <img className="w-full" src={ig} alt="instagram" />
-        </div>
+        </Link>:<div  className="igDiv w-10">
+          <img className="w-full" src={ig} alt="instagram" />
+        </div>}
           </div>
         
         </div>
@@ -24,13 +29,13 @@ const Contact = () => {
           <p className="text-white text-xl">hello@itacateburittos.com</p> */}
           <ul text-white>
           <li>
-            <Link to="/imprint">Imprint</Link>
+            <Link to={`${locale}/imprint`}>Imprint</Link>
             </li>
             <li>
-            <Link to="/privacy">Privacy Policy </Link>
+            <Link to={`${locale}/privacy`}>Privacy Policy </Link>
             </li>
             <li>
-            <Link to="/disclaimer">Disclaimer</Link>
+            <Link to={`${locale}/disclaimer`}>Disclaimer</Link>
             </li>
         </ul>
         </div>

@@ -29,7 +29,7 @@ module.exports = {
       // Supported languages
       languages: [`es`, `en`],
       // Default site language
-      defaultLanguage: `en`,
+      defaultLanguage: `es`,
       // Redirects to `/pt` in the route `/`
       redirect: false,
     },

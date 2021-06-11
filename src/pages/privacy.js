@@ -259,8 +259,7 @@ export default function Home() {
         <p>
           If you would like to: access, correct, amend or delete any personal
           information we have about you, register a complaint, or simply want
-          more information, please fill out the contact form on the website to
-          get in touch with us.
+          more information, please contact us by email at: hello@itacateburritos.com.
         </p>
       </div>
     <Contact />

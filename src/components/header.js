@@ -4,7 +4,7 @@ import OrderNow from "./ordernow"
 import { Link } from "gatsby"
 import Sticky from "react-sticky-el"
 import { useIntl } from "gatsby-plugin-intl"
-import { Flag } from 'semantic-ui-react'
+//import { Flag } from 'semantic-ui-react'
 
 const Header = props => {
   let menuActive = props.menuState ? "is-inactive" : ""
@@ -13,7 +13,7 @@ const Header = props => {
   // let wFull = !props.menuState ? "w-full" : ""
 
   const intl = useIntl()
-  const locale = intl.locale !== "en" ? `/${intl.locale}` : ""
+  const locale = intl.locale !== "es" ? `/${intl.locale}` : ""
   return (
     <Sticky className="sticky">
       <nav className="nav relative">
@@ -72,15 +72,15 @@ const Header = props => {
         <div className="absolute top-4 right-8">
           <ul className="text-red text-2xl flex">
             <li className="mr-2">
-              <Link to="/" className="">
-              {/* <span className="text-red"> EN</span> */}
-              <Flag name='uk' />
+              <Link to="/en" className="">
+              <span className="text-red"> EN</span>
+              {/* <Flag name='uk' /> */}
               </Link>
             </li>
             <li>
-              <Link to="/es" className="">
-              {/* <span className="text-red"> ES</span> */}
-              <Flag name='spain' />
+              <Link to="/" className="">
+              <span className="text-red"> ES</span>
+              {/* <Flag name='spain' /> */}
 
               </Link>
             </li>
