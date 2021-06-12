@@ -73,13 +73,13 @@ const Header = props => {
           <ul className="text-red text-2xl flex">
             <li className="mr-2">
               <Link to="/en" className="">
-              <span className="text-red"> EN</span>
+              <span className="text-yellow"> EN</span>
               {/* <Flag name='uk' /> */}
               </Link>
             </li>
             <li>
               <Link to="/" className="">
-              <span className="text-red"> ES</span>
+              <span className="text-yellow"> ES</span>
               {/* <Flag name='spain' /> */}
 
               </Link>
