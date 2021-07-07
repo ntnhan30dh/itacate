@@ -3,8 +3,7 @@ import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
 
 const MenuItem = props => {
-  const [pic, setPic] = useState(0)
-
+  
   const data = useStaticQuery(graphql`
     {
       burritoBeef: file(relativePath: { eq: "burrito_beef.jpg" }) {
@@ -163,7 +162,9 @@ const MenuItem = props => {
         }
       }
 
-      queVeggieBadge: file(relativePath: { eq: "badge__veggi-quesadillas.png" }) {
+      queVeggieBadge: file(
+        relativePath: { eq: "badge__veggi-quesadillas.png" }
+      ) {
         childImageSharp {
           fluid(quality: 90, maxWidth: 200) {
             ...GatsbyImageSharpFluid_withWebp
@@ -297,14 +298,18 @@ const MenuItem = props => {
   const picArr = picsSrc[`${props.setting.name}`]["pics"]
   const badgeArr = picsSrc[`${props.setting.name}`]["badges"]
 
+  const [pic, setPic] = useState(0)
+  const [prePic, setPrePic] = useState(picArr.length - 1)
+
+
   useEffect(() => {
     if (pic >= picArr.length) {
       setPic(0)
     }
     const interval = setInterval(() => {
-      if (pic <= picArr.length) {
-        setPic(pic => pic + 1)
-      }
+      // if (pic <= picArr.length) {
+      //   setPic(pic => pic + 1)
+      // }
     }, 5000)
 
     return () => {
@@ -312,6 +317,10 @@ const MenuItem = props => {
     }
   }, [pic, picArr.length])
 
+  const handleclick = i => {
+    setPrePic(pic)
+    setPic(props.setting.itemList.indexOf(i))
+  }
   return (
     <div
       className={`menu-item-container flex flex-col md:flex-row border-10 xsm:border-15 border-${props.setting.border} w-3/4 lg:w-2/3 xl:w-1/2 mx-auto my-12  transform  ${props.setting.reverse}`}
@@ -325,7 +334,7 @@ const MenuItem = props => {
         <div className="absolute w-full bottom-0 top-0">
           <Img
             className={" menu-pic2 w-full"}
-            fluid={pic > 0 ? picArr[pic - 1] : picArr[picArr.length - 1]}
+            fluid={ picArr[prePic] }
           />
         </div>
         <Img className={" menu-pic w-full "} fluid={picArr[pic]} />
@@ -340,7 +349,7 @@ const MenuItem = props => {
               <li>
                 <button
                   className="text-2xl text-green"
-                  onClick={() => setPic(props.setting.itemList.indexOf(i))}
+                  onClick={() => handleclick(i)}
                 >
                   {i}
                 </button>
